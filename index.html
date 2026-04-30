@@ -102,9 +102,9 @@
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
   h1.hero-title{
     font-family:'Barlow Condensed',sans-serif;
-    font-size:clamp(2.8rem,6vw,5.4rem);
-    font-weight:800;line-height:0.98;letter-spacing:-0.02em;
-    margin-bottom:28px;color:var(--navy);
+    font-size:clamp(2.4rem,5vw,4.4rem);
+    font-weight:800;line-height:1.02;letter-spacing:-0.02em;
+    margin-bottom:24px;color:var(--navy);
   }
   h1.hero-title em{font-style:normal;color:var(--teal);font-weight:800}
   .hero-sub{font-size:1.15rem;color:var(--body);max-width:560px;margin-bottom:40px;line-height:1.6}
@@ -127,18 +127,18 @@
   .carousel-slide{
     flex:0 0 100%;width:100%;height:100%;position:relative;
     display:flex;align-items:center;justify-content:center;
-    background:linear-gradient(135deg,#2c5f8d 0%,#1e3a5f 50%,#13294b 100%);
+    background:linear-gradient(135deg,#5a8db3 0%,#3a6991 50%,#2c5478 100%);
     overflow:hidden;
   }
   .carousel-slide::before{
     content:'';position:absolute;inset:0;
     background-image:
-      radial-gradient(circle at 20% 30%,rgba(61,155,142,0.25),transparent 50%),
-      radial-gradient(circle at 80% 70%,rgba(127,184,212,0.2),transparent 50%);
+      radial-gradient(circle at 20% 30%,rgba(61,155,142,0.20),transparent 55%),
+      radial-gradient(circle at 80% 70%,rgba(127,184,212,0.25),transparent 55%);
   }
   .carousel-slide::after{
     content:'';position:absolute;inset:0;
-    background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);
+    background-image:linear-gradient(rgba(255,255,255,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.05) 1px,transparent 1px);
     background-size:50px 50px;
   }
   .carousel-slide .placeholder{
@@ -167,18 +167,19 @@
     position:relative;z-index:2;
     width:100%;height:100%;
     display:flex;align-items:center;justify-content:center;
-    padding:24px 32px 32px;
+    /* Padding mínimo: 65px laterais (setas + folga), 38px embaixo (dots), 8px topo */
+    padding:8px 65px 38px;
   }
   .carousel-slide.product-slide .product-visual img{
     position:relative;width:auto;height:auto;
-    max-width:96%;max-height:96%;
+    max-width:100%;max-height:100%;
     object-fit:contain;inset:auto;
-    filter:drop-shadow(0 24px 50px rgba(0,0,0,0.45)) drop-shadow(0 0 30px rgba(127,184,212,0.15));
+    filter:drop-shadow(0 24px 50px rgba(0,0,0,0.35)) drop-shadow(0 0 30px rgba(127,184,212,0.2));
     transition:transform 0.7s cubic-bezier(0.2,0.8,0.2,1);
   }
   .carousel-slide.product-slide.is-active .product-visual img{transform:scale(1.02)}
-  /* Slide específico do Testador (mantém tamanho menor pois o produto é compacto) */
-  .carousel-slide.product-slide.testador .product-visual img{max-width:78%;max-height:78%}
+  /* Slide específico Carcaça vertical (alta e fina — limita a largura para não distorcer) */
+  .carousel-slide.product-slide.carcaca .product-visual img{max-width:68%}
 
   .carousel-nav{
     position:absolute;top:50%;transform:translateY(-50%);z-index:10;
@@ -979,14 +980,14 @@
             <img src="img/testador-integridade-verter.png" alt="Testador de Integridade — VERTER" loading="lazy">
           </div>
         </div>
-        <div class="carousel-slide product-slide">
+        <div class="carousel-slide product-slide carcaca">
           <div class="product-visual">
-            <img src="img/filtro-bag-big-blue-atlas-filtri-pbh420.png" alt="Filtro Bag Big Blue Atlas Filtri PBH420" loading="lazy">
+            <img src="img/slide3-carcaca-single.png" alt="Carcaça Sanitária Single" loading="lazy">
           </div>
         </div>
         <div class="carousel-slide product-slide">
           <div class="product-visual">
-            <img src="img/pecas-codeline-capsulas.png" alt="Peças Codeline e Filtros Cápsula" loading="lazy">
+            <img src="img/slide4-cartuchos-bds2.png" alt="Cartuchos Filtrantes" loading="lazy">
           </div>
         </div>
       </div>
@@ -1025,7 +1026,7 @@
     </div>
     <div class="seg-grid">
       <div class="seg">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg></div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg></div>
         <span class="num">01</span>
         <strong>Farmacêutico</strong>
         <p>Filtração estéril, soluções parenterais, buffers, soluções oftálmicas e processos injetáveis.</p>
@@ -1205,7 +1206,7 @@
     <div class="container">
       <div style="margin-bottom:40px">
         <div class="eyebrow">Catálogo</div>
-        <h2 style="max-width:800px">Produtos <em>disponíveis</em>.</h2>
+        <h2 style="max-width:800px">Produtos <em>disponíveis</em><span style="font-size:0.55em;vertical-align:baseline">.</span></h2>
         <p style="color:var(--body);margin-top:12px;max-width:720px">Uma seleção dos produtos mais solicitados, organizados em 12 categorias técnicas. Nosso portfólio completo é significativamente mais amplo — com configurações sob medida, porosidades específicas e importação direta de fabricantes globais.</p>
       </div>
 
