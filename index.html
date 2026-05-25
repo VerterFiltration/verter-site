@@ -1358,15 +1358,28 @@
           </div>
         </div>
         <div class="form-wrap">
-          <form onsubmit="event.preventDefault();alert('Formulário enviado (demo)')">
-            <div class="form-field"><label>Nome completo</label><input type="text" required></div>
-            <div class="form-field"><label>E-mail corporativo</label><input type="email" required></div>
-            <div class="form-field"><label>Empresa</label><input type="text"></div>
+          <form id="contato-form" action="https://formspree.io/f/meedraon" method="POST">
+            <div class="form-field"><label>Nome completo</label><input type="text" name="nome" required></div>
+            <div class="form-field"><label>E-mail corporativo</label><input type="email" name="email" required></div>
+            <div class="form-field"><label>Empresa</label><input type="text" name="empresa"></div>
             <div class="form-field"><label>Área de atuação</label>
-              <select><option>Farmacêutico</option><option>Biotecnologia</option><option>Bebidas</option><option>Químico / Petroquímico</option><option>Semicondutores</option><option>Outros</option></select>
+              <select name="area">
+                <option>Farmacêutico</option>
+                <option>Biotecnologia</option>
+                <option>Bebidas</option>
+                <option>Químico / Petroquímico</option>
+                <option>Semicondutores</option>
+                <option>Outros</option>
+              </select>
             </div>
-            <div class="form-field"><label>Briefing técnico</label><textarea rows="5" placeholder="Descreva sua aplicação, vazão, temperatura, compatibilidade química..."></textarea></div>
-            <button type="submit" class="cta-btn">Enviar mensagem<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+            <div class="form-field"><label>Briefing técnico</label><textarea name="briefing" rows="5" placeholder="Descreva sua aplicação, vazão, temperatura, compatibilidade química..."></textarea></div>
+            <input type="hidden" name="_subject" value="Nova mensagem do site Verter">
+            <input type="text" name="_gotcha" style="display:none">
+            <button type="submit" class="cta-btn" id="contato-submit">
+              <span class="btn-label">Enviar mensagem</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+            <div id="contato-msg" style="margin-top:18px;display:none"></div>
           </form>
         </div>
       </div>
@@ -2265,6 +2278,55 @@
   renderDestaques();
   renderBlogCats();
   renderBlogList();
+
+  // ===== Handler de envio do formulário (Formspree) =====
+  const contatoForm = document.getElementById('contato-form');
+  if(contatoForm){
+    contatoForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('contato-submit');
+      const msg = document.getElementById('contato-msg');
+      const label = btn.querySelector('.btn-label');
+      const labelOriginal = label.textContent;
+      btn.disabled = true;
+      label.textContent = 'Enviando...';
+      msg.style.display = 'none';
+      try {
+        const formData = new FormData(contatoForm);
+        const resp = await fetch(contatoForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+        if(resp.ok){
+          contatoForm.reset();
+          msg.style.display = 'block';
+          msg.style.background = 'rgba(61,155,142,0.12)';
+          msg.style.border = '1px solid rgba(61,155,142,0.4)';
+          msg.style.color = 'var(--teal)';
+          msg.style.padding = '14px 18px';
+          msg.style.borderRadius = '10px';
+          msg.style.fontSize = '0.95rem';
+          msg.innerHTML = '<strong>Mensagem enviada com sucesso!</strong><br>Nossa equipe técnica entrará em contato em até 24h úteis.';
+          label.textContent = labelOriginal;
+          btn.disabled = false;
+        } else {
+          throw new Error('Erro no envio');
+        }
+      } catch(err){
+        msg.style.display = 'block';
+        msg.style.background = 'rgba(220,80,80,0.1)';
+        msg.style.border = '1px solid rgba(220,80,80,0.4)';
+        msg.style.color = '#c44';
+        msg.style.padding = '14px 18px';
+        msg.style.borderRadius = '10px';
+        msg.style.fontSize = '0.95rem';
+        msg.innerHTML = '<strong>Erro ao enviar.</strong><br>Por favor, fale conosco pelo WhatsApp (48) 98469-1375 ou e-mail verter@verterfiltration.com.br';
+        label.textContent = labelOriginal;
+        btn.disabled = false;
+      }
+    });
+  }
 </script>
 
 </body>
