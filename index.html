@@ -902,6 +902,188 @@
     .beyond-stat{border-right:none;border-bottom:1px solid var(--line)}
     .beyond-stat:last-child{border-bottom:none}
   }
+
+  /* ============================================================ */
+  /* MOBILE — pacote completo de responsividade                   */
+  /* ============================================================ */
+
+  /* Botão hambúrguer (oculto no desktop) */
+  .nav-hamburger{
+    display:none;
+    background:none;border:none;cursor:pointer;
+    padding:8px;margin-left:auto;
+    width:44px;height:44px;
+    align-items:center;justify-content:center;
+  }
+  .nav-hamburger svg{width:28px;height:28px;color:var(--navy)}
+
+  /* Drawer (gaveta lateral) e overlay (escurecido) */
+  .mobile-drawer-overlay{
+    display:none;
+    position:fixed;inset:0;
+    background:rgba(19,41,75,0.55);
+    z-index:998;
+    opacity:0;transition:opacity 0.25s ease;
+  }
+  .mobile-drawer-overlay.open{display:block;opacity:1}
+  .mobile-drawer{
+    position:fixed;top:0;right:0;bottom:0;
+    width:min(82vw,340px);
+    background:var(--paper);
+    z-index:999;
+    transform:translateX(100%);
+    transition:transform 0.3s ease;
+    box-shadow:-4px 0 24px rgba(19,41,75,0.18);
+    display:flex;flex-direction:column;
+    padding:24px 24px 32px;
+    overflow-y:auto;
+  }
+  .mobile-drawer.open{transform:translateX(0)}
+  .mobile-drawer-header{
+    display:flex;justify-content:space-between;align-items:center;
+    padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:18px;
+  }
+  .mobile-drawer-header strong{color:var(--navy);font-size:1.1rem;letter-spacing:0.04em}
+  .mobile-drawer-close{
+    background:none;border:none;cursor:pointer;padding:6px;
+    color:var(--navy);font-size:1.5rem;line-height:1;
+  }
+  .mobile-drawer a.nav-link{
+    display:block;padding:14px 0;
+    color:var(--navy);text-decoration:none;
+    font-size:1.05rem;font-weight:500;
+    border-bottom:1px solid var(--line);
+  }
+  .mobile-drawer a.nav-link.active{color:var(--teal);font-weight:600}
+  .mobile-drawer-contact{
+    margin-top:24px;padding-top:20px;border-top:1px solid var(--line);
+    font-size:0.88rem;color:var(--body);line-height:1.7;
+  }
+  .mobile-drawer-contact a{color:var(--blue);text-decoration:none;display:block;margin-top:4px}
+  .mobile-drawer .cta-btn{
+    margin-top:24px;justify-content:center;width:100%;
+    padding:14px 20px;
+  }
+
+  /* Ajustes principais para telas <= 768px */
+  @media(max-width:768px){
+    /* Topbar: esconder textão, manter compacta */
+    .topbar{padding:10px 0;font-size:0.78rem}
+    .topbar-inner{padding:0 16px;flex-wrap:nowrap;gap:8px;justify-content:space-between}
+    .topbar-left{gap:8px;flex-wrap:nowrap;overflow:hidden}
+    .topbar-left span:first-child{display:none}
+    .topbar-left .mono{font-size:0.78rem;white-space:nowrap}
+    .topbar > .topbar-inner > div:last-child{display:none}
+
+    /* Nav principal: mostrar hambúrguer, esconder links */
+    .nav-inner{padding:12px 16px;gap:12px}
+    .nav-links{display:none !important}
+    .nav-hamburger{display:flex}
+
+    /* CTA "Solicitar cotação" no topo: compactar */
+    nav.main .cta-btn{
+      display:none;
+    }
+
+    /* Hero */
+    .hero-inner{padding:48px 20px 40px;gap:32px}
+    .hero h1{font-size:clamp(2rem,7.5vw,2.6rem) !important;line-height:1.1}
+    .hero-sub{font-size:1rem;margin-bottom:28px}
+    .hero-cta{flex-direction:column;align-items:stretch;gap:12px}
+    .hero-cta .btn,.hero-cta .btn-outline{width:100%;justify-content:center}
+    .hero-carousel{height:280px}
+    .carousel-nav{width:36px;height:36px}
+
+    /* Stats no rodapé do hero */
+    .hero-stats-inner{grid-template-columns:1fr 1fr;gap:16px;padding:24px 16px}
+    .stat .num{font-size:2rem}
+    .stat .label{font-size:0.75rem}
+
+    /* Section heads (títulos das seções) */
+    .section-head{flex-direction:column;align-items:flex-start;gap:16px}
+    .section-head h2{font-size:clamp(1.6rem,5.5vw,2.2rem)}
+    .section-head p{font-size:0.95rem}
+
+    /* Grids genéricos */
+    .pilares-grid,.seg-grid,.beyond-grid,.empresa-grid,.contato-grid,.foot-grid{
+      grid-template-columns:1fr !important;gap:24px
+    }
+
+    /* Lista de produtos */
+    .produtos-layout{grid-template-columns:1fr !important;gap:20px}
+    .produtos-toolbar{flex-direction:column;gap:12px;align-items:stretch}
+    .produtos-search{min-width:0;width:100%}
+    aside.filtros{
+      position:relative;top:auto;
+      border-radius:12px;padding:18px 16px;
+    }
+    .filtro-titulo{font-size:0.95rem}
+    .filtro-grupo button{font-size:0.92rem;padding:10px 14px}
+    .produto-card{padding:0}
+    .produto-card .pcard-img{aspect-ratio:16/10;max-height:240px}
+    .produto-card .pcard-img img{max-width:55%;max-height:75%}
+    .produto-card .pcard-body{padding:18px 18px 22px}
+    .produto-card h3{font-size:1.05rem}
+    .produto-card .pcard-desc{font-size:0.9rem}
+
+    /* Detalhe de produto */
+    .pd-grid{grid-template-columns:1fr !important;gap:24px}
+    .pd-gallery{min-height:260px;padding:24px}
+    .pd-info h1{font-size:clamp(1.6rem,5.5vw,2.2rem) !important;line-height:1.15}
+    .pd-cat{font-size:0.78rem}
+    .pd-desc{font-size:0.95rem}
+    .pd-cta{flex-direction:column;align-items:stretch;gap:10px}
+    .pd-cta .btn,.pd-cta .btn-outline{width:100%;justify-content:center}
+    .pd-spec-head{padding:14px 16px;font-size:0.85rem}
+    .pd-spec-body{padding:16px 18px;font-size:0.9rem}
+
+    /* Página empresa */
+    .empresa-hero,.blog-hero{padding:64px 20px 48px}
+    .empresa-hero h1,.blog-hero h1{font-size:clamp(2rem,7vw,2.8rem)}
+    .empresa-content,.contato-section{padding:48px 20px}
+    .missao-box{padding:20px}
+    .missao-box p{font-size:1.1rem}
+
+    /* Contato */
+    .info-item{padding:18px 20px}
+    .form-grid{grid-template-columns:1fr !important}
+
+    /* Footer */
+    .foot-inner{padding:48px 20px 28px}
+    .foot-brand p{max-width:none}
+    .foot-bottom{flex-direction:column;gap:16px;text-align:center}
+
+    /* CTA section antes do footer */
+    .cta{padding:48px 20px}
+    .cta-inner h2{font-size:clamp(1.8rem,6vw,2.4rem)}
+    .cta-inner p{font-size:1rem}
+
+    /* Blog */
+    .blog-featured{grid-template-columns:1fr}
+    .blog-grid{grid-template-columns:1fr;gap:20px}
+    .blog-toolbar-inner{flex-direction:column;align-items:stretch;gap:12px}
+    .blog-search{min-width:0;width:100%}
+    .post-hero{padding:56px 20px 40px}
+    .post-hero h1{font-size:clamp(1.6rem,5.5vw,2.4rem)}
+    .post-body{padding:32px 20px}
+    .post-body-inner{font-size:1rem}
+
+    /* Callout final dos produtos */
+    .pd-variations{padding:16px}
+    .var-note{font-size:0.9rem}
+
+    /* Logo no header — texto menor */
+    .logo-text strong{font-size:1.15rem}
+    .logo-text span{font-size:0.6rem;letter-spacing:0.18em}
+    .logo-link img{height:36px;width:auto}
+  }
+
+  /* Telas muito pequenas (iPhone SE etc) */
+  @media(max-width:380px){
+    .topbar-left .mono{font-size:0.72rem}
+    .hero h1{font-size:1.8rem !important}
+    .hero-stats-inner{grid-template-columns:1fr}
+  }
 </style>
 </head>
 <body>
@@ -948,12 +1130,39 @@
       <a href="#" class="nav-link" data-page="contato" onclick="showPage('contato');return false;">Contato</a>
       <a href="#" class="nav-link" data-page="blog" onclick="showPage('blog');return false;">Blog</a>
     </div>
+    <button class="nav-hamburger" aria-label="Abrir menu" onclick="openMobileDrawer()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
     <a href="https://wa.me/5548984691375" class="cta-btn">
       Solicitar cotação
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
     </a>
   </div>
 </nav>
+
+<!-- MOBILE DRAWER (menu hambúrguer) -->
+<div class="mobile-drawer-overlay" id="mobile-drawer-overlay" onclick="closeMobileDrawer()"></div>
+<aside class="mobile-drawer" id="mobile-drawer" role="dialog" aria-label="Menu de navegação">
+  <div class="mobile-drawer-header">
+    <strong>MENU</strong>
+    <button class="mobile-drawer-close" aria-label="Fechar menu" onclick="closeMobileDrawer()">&times;</button>
+  </div>
+  <a href="#" class="nav-link" data-page="home" onclick="showPage('home');closeMobileDrawer();return false;">Home</a>
+  <a href="#" class="nav-link" data-page="empresa" onclick="showPage('empresa');closeMobileDrawer();return false;">Empresa</a>
+  <a href="#" class="nav-link" data-page="produtos" onclick="showPage('produtos');closeMobileDrawer();return false;">Produtos</a>
+  <a href="#" class="nav-link" data-page="contato" onclick="showPage('contato');closeMobileDrawer();return false;">Contato</a>
+  <a href="#" class="nav-link" data-page="blog" onclick="showPage('blog');closeMobileDrawer();return false;">Blog</a>
+  <div class="mobile-drawer-contact">
+    <span style="color:var(--teal);font-weight:600">Atendimento técnico</span>
+    <a href="tel:+5548984691375">(48) 98469-1375</a>
+    <a href="tel:+551733633290">(17) 3363-3290</a>
+    <a href="mailto:verter@verterfiltration.com.br">verter@verterfiltration.com.br</a>
+  </div>
+  <a href="https://wa.me/5548984691375" class="cta-btn">
+    Solicitar cotação
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+  </a>
+</aside>
 
 <!-- ========================== HOME ========================== -->
 <div class="page active" id="page-home">
@@ -2229,6 +2438,22 @@
     document.querySelectorAll('.nav-link').forEach(el=>el.classList.toggle('active',el.dataset.page===pageName));
     window.scrollTo({top:0,behavior:'smooth'});
   }
+
+  // ===== Mobile drawer (menu hambúrguer) =====
+  function openMobileDrawer(){
+    document.getElementById('mobile-drawer').classList.add('open');
+    document.getElementById('mobile-drawer-overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileDrawer(){
+    document.getElementById('mobile-drawer').classList.remove('open');
+    document.getElementById('mobile-drawer-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  // Fechar drawer com tecla ESC
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeMobileDrawer();
+  });
 
   renderAll();
   renderDestaques();
