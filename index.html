@@ -1578,7 +1578,7 @@
           </div>
         </div>
         <div class="form-wrap">
-          <form id="contato-form" action="https://solitary-hill-77c0.verter.workers.dev" method="POST">
+          <form id="contato-form" action="https://formspree.io/f/mlgyygdz" method="POST">
             <div class="form-field"><label>Nome completo</label><input type="text" name="nome" required></div>
             <div class="form-field"><label>E-mail corporativo</label><input type="email" name="email" required></div>
             <div class="form-field"><label>Empresa</label><input type="text" name="empresa"></div>
@@ -2489,8 +2489,35 @@
     const labelOriginal = label.dataset.original || 'Enviar mensagem';
     try {
       const formData = new FormData(contatoForm);
-      // O token já vem automaticamente no campo 'cf-turnstile-response'
-      // mas garantimos aqui caso o Formspree espere outro nome
+
+      // 1) Porteiro: valida Turnstile + filtro anti-spam no Worker
+      const guard = await fetch('https://solitary-hill-77c0.verter.workers.dev', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      if(!guard.ok) throw new Error('Bloqueado na verificação');
+      const guardData = await guard.json();
+      if(guardData.spam){
+        // Spam detectado: finge sucesso e descarta (não envia pro Formspree)
+        contatoForm.reset();
+        const msgOk = document.getElementById('contato-msg');
+        msgOk.style.display = 'block';
+        msgOk.style.background = 'rgba(61,155,142,0.12)';
+        msgOk.style.border = '1px solid rgba(61,155,142,0.4)';
+        msgOk.style.color = 'var(--teal)';
+        msgOk.style.padding = '14px 18px';
+        msgOk.style.borderRadius = '10px';
+        msgOk.style.fontSize = '0.95rem';
+        msgOk.innerHTML = '<strong>Mensagem enviada com sucesso!</strong><br>Nossa equipe técnica entrará em contato em até 24h úteis.';
+        label.textContent = labelOriginal;
+        btn.disabled = false;
+        if(window.turnstile) turnstile.reset(document.querySelector('.cf-turnstile'));
+        return;
+      }
+
+      // 2) Aprovado: o navegador envia direto pro Formspree
+      formData.delete('cf-turnstile-response');
       const resp = await fetch(contatoForm.action, {
         method: 'POST',
         body: formData,
