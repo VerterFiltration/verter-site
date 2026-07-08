@@ -14,6 +14,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Cloudflare Turnstile (proteção anti-bot invisível) -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <style>
   :root{
     /* Paleta extraída da logo oficial */
@@ -91,6 +93,15 @@
   .cta-btn svg{width:16px;height:16px}
   .cta-btn.teal{background:var(--teal)}
   .cta-btn.teal:hover{background:#2f8075}
+  /* Badge WhatsApp dentro do CTA */
+  .cta-btn .wa-badge{
+    width:22px;height:22px;min-width:22px;border-radius:50%;
+    background:#25D366;display:inline-flex;align-items:center;justify-content:center;
+    box-shadow:0 0 0 2px rgba(255,255,255,0.28);
+    transition:transform 0.25s;
+  }
+  .cta-btn .wa-badge svg{width:13px;height:13px;fill:#fff;stroke:none}
+  .cta-btn:hover .wa-badge{transform:scale(1.1)}
 
   /* ---------- HERO ---------- */
   .hero{
@@ -1133,9 +1144,9 @@
     <button class="nav-hamburger" aria-label="Abrir menu" onclick="openMobileDrawer()">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
-    <a href="https://wa.me/5548984691375" class="cta-btn">
+    <a href="https://wa.me/5548984691375" class="cta-btn" aria-label="Solicitar cotação pelo WhatsApp">
       Solicitar cotação
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      <span class="wa-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg></span>
     </a>
   </div>
 </nav>
@@ -1158,9 +1169,9 @@
     <a href="tel:+551733633290">(17) 3363-3290</a>
     <a href="mailto:verter@verterfiltration.com.br">verter@verterfiltration.com.br</a>
   </div>
-  <a href="https://wa.me/5548984691375" class="cta-btn">
+  <a href="https://wa.me/5548984691375" class="cta-btn" aria-label="Solicitar cotação pelo WhatsApp">
     Solicitar cotação
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    <span class="wa-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg></span>
   </a>
 </aside>
 
@@ -1469,7 +1480,7 @@
           <div class="pd-name-bar"><h1 id="pd-name">Nome do Produto</h1></div>
           <p class="pd-desc" id="pd-desc">Descrição do produto...</p>
           <div class="pd-cta-row">
-            <a href="https://wa.me/5548984691375" class="cta-btn">Solicitar cotação<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            <a href="https://wa.me/5548984691375" class="cta-btn" aria-label="Solicitar cotação pelo WhatsApp">Solicitar cotação<span class="wa-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg></span></a>
             <a href="#" onclick="showPage('contato');return false;" class="btn-ghost">Enviar briefing técnico</a>
           </div>
           <div class="pd-specs" id="pd-specs"></div>
@@ -1567,7 +1578,7 @@
           </div>
         </div>
         <div class="form-wrap">
-          <form id="contato-form" action="https://formspree.io/f/meedraon" method="POST">
+          <form id="contato-form" action="https://solitary-hill-77c0.verter.workers.dev" method="POST">
             <div class="form-field"><label>Nome completo</label><input type="text" name="nome" required></div>
             <div class="form-field"><label>E-mail corporativo</label><input type="email" name="email" required></div>
             <div class="form-field"><label>Empresa</label><input type="text" name="empresa"></div>
@@ -1584,6 +1595,8 @@
             <div class="form-field"><label>Briefing técnico</label><textarea name="briefing" rows="5" placeholder="Descreva sua aplicação, vazão, temperatura, compatibilidade química..."></textarea></div>
             <input type="hidden" name="_subject" value="Nova mensagem do site Verter">
             <input type="text" name="_gotcha" style="display:none">
+            <!-- Cloudflare Turnstile widget invisível -->
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAADyGGHi4U-LDyIAI" data-callback="onTurnstileSuccess" data-size="invisible"></div>
             <button type="submit" class="cta-btn" id="contato-submit">
               <span class="btn-label">Enviar mensagem</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -2460,51 +2473,74 @@
   renderBlogCats();
   renderBlogList();
 
-  // ===== Handler de envio do formulário (Formspree) =====
+  // ===== Handler de envio do formulário (Formspree + Turnstile) =====
   const contatoForm = document.getElementById('contato-form');
+
+  // Callback chamado pelo Turnstile quando obtém o token com sucesso
+  // Definida no escopo global (window) para o Turnstile conseguir chamar
+  window.onTurnstileSuccess = async function(token){
+    const btn = document.getElementById('contato-submit');
+    const msg = document.getElementById('contato-msg');
+    const label = btn.querySelector('.btn-label');
+    const labelOriginal = label.dataset.original || 'Enviar mensagem';
+    try {
+      const formData = new FormData(contatoForm);
+      // O token já vem automaticamente no campo 'cf-turnstile-response'
+      // mas garantimos aqui caso o Formspree espere outro nome
+      const resp = await fetch(contatoForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      if(resp.ok){
+        contatoForm.reset();
+        msg.style.display = 'block';
+        msg.style.background = 'rgba(61,155,142,0.12)';
+        msg.style.border = '1px solid rgba(61,155,142,0.4)';
+        msg.style.color = 'var(--teal)';
+        msg.style.padding = '14px 18px';
+        msg.style.borderRadius = '10px';
+        msg.style.fontSize = '0.95rem';
+        msg.innerHTML = '<strong>Mensagem enviada com sucesso!</strong><br>Nossa equipe técnica entrará em contato em até 24h úteis.';
+        label.textContent = labelOriginal;
+        btn.disabled = false;
+        // Reseta o Turnstile pra permitir novo envio
+        if(window.turnstile) turnstile.reset();
+      } else {
+        throw new Error('Erro no envio');
+      }
+    } catch(err){
+      msg.style.display = 'block';
+      msg.style.background = 'rgba(220,80,80,0.1)';
+      msg.style.border = '1px solid rgba(220,80,80,0.4)';
+      msg.style.color = '#c44';
+      msg.style.padding = '14px 18px';
+      msg.style.borderRadius = '10px';
+      msg.style.fontSize = '0.95rem';
+      msg.innerHTML = '<strong>Erro ao enviar.</strong><br>Por favor, fale conosco pelo WhatsApp (48) 98469-1375 ou e-mail verter@verterfiltration.com.br';
+      label.textContent = labelOriginal;
+      btn.disabled = false;
+      if(window.turnstile) turnstile.reset();
+    }
+  };
+
   if(contatoForm){
     contatoForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = document.getElementById('contato-submit');
       const msg = document.getElementById('contato-msg');
       const label = btn.querySelector('.btn-label');
-      const labelOriginal = label.textContent;
+      label.dataset.original = label.textContent;
       btn.disabled = true;
-      label.textContent = 'Enviando...';
+      label.textContent = 'Verificando...';
       msg.style.display = 'none';
-      try {
-        const formData = new FormData(contatoForm);
-        const resp = await fetch(contatoForm.action, {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        });
-        if(resp.ok){
-          contatoForm.reset();
-          msg.style.display = 'block';
-          msg.style.background = 'rgba(61,155,142,0.12)';
-          msg.style.border = '1px solid rgba(61,155,142,0.4)';
-          msg.style.color = 'var(--teal)';
-          msg.style.padding = '14px 18px';
-          msg.style.borderRadius = '10px';
-          msg.style.fontSize = '0.95rem';
-          msg.innerHTML = '<strong>Mensagem enviada com sucesso!</strong><br>Nossa equipe técnica entrará em contato em até 24h úteis.';
-          label.textContent = labelOriginal;
-          btn.disabled = false;
-        } else {
-          throw new Error('Erro no envio');
-        }
-      } catch(err){
-        msg.style.display = 'block';
-        msg.style.background = 'rgba(220,80,80,0.1)';
-        msg.style.border = '1px solid rgba(220,80,80,0.4)';
-        msg.style.color = '#c44';
-        msg.style.padding = '14px 18px';
-        msg.style.borderRadius = '10px';
-        msg.style.fontSize = '0.95rem';
-        msg.innerHTML = '<strong>Erro ao enviar.</strong><br>Por favor, fale conosco pelo WhatsApp (48) 98469-1375 ou e-mail verter@verterfiltration.com.br';
-        label.textContent = labelOriginal;
-        btn.disabled = false;
+      // Dispara o Turnstile — quando ele terminar, chama onTurnstileSuccess
+      if(window.turnstile){
+        turnstile.execute();
+      } else {
+        // Fallback: se o Turnstile não carregou, tenta enviar direto (evita travar o form)
+        console.warn('Turnstile não carregou, enviando sem verificação');
+        window.onTurnstileSuccess('');
       }
     });
   }
