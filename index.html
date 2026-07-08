@@ -1596,7 +1596,7 @@
             <input type="hidden" name="_subject" value="Nova mensagem do site Verter">
             <input type="text" name="_gotcha" style="display:none">
             <!-- Cloudflare Turnstile widget invisível -->
-            <div class="cf-turnstile" data-sitekey="0x4AAAAAADyGGHi4U-LDyIAI" data-callback="onTurnstileSuccess" data-size="invisible"></div>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAADyGGHi4U-LDyIAI" data-callback="onTurnstileSuccess" data-size="invisible" data-execution="execute"></div>
             <button type="submit" class="cta-btn" id="contato-submit">
               <span class="btn-label">Enviar mensagem</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -2478,7 +2478,11 @@
 
   // Callback chamado pelo Turnstile quando obtém o token com sucesso
   // Definida no escopo global (window) para o Turnstile conseguir chamar
+  let envioSolicitado = false; // só envia quando o usuário clicar em Enviar
+
   window.onTurnstileSuccess = async function(token){
+    if(!envioSolicitado) return; // ignora execuções automáticas do widget
+    envioSolicitado = false;
     const btn = document.getElementById('contato-submit');
     const msg = document.getElementById('contato-msg');
     const label = btn.querySelector('.btn-label');
@@ -2535,8 +2539,9 @@
       label.textContent = 'Verificando...';
       msg.style.display = 'none';
       // Dispara o Turnstile — quando ele terminar, chama onTurnstileSuccess
+      envioSolicitado = true;
       if(window.turnstile){
-        turnstile.execute();
+        turnstile.execute(document.querySelector('.cf-turnstile'));
       } else {
         // Fallback: se o Turnstile não carregou, tenta enviar direto (evita travar o form)
         console.warn('Turnstile não carregou, enviando sem verificação');
