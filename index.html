@@ -2517,7 +2517,7 @@
       }
 
       // 2) Aprovado: o navegador envia direto pro Formspree
-      formData.delete('cf-turnstile-response');
+      // (o token cf-turnstile-response vai junto — o Formspree valida ele com a Secret Key)
       const resp = await fetch(contatoForm.action, {
         method: 'POST',
         body: formData,
