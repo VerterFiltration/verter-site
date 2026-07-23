@@ -23,7 +23,7 @@ var CONV_LABEL_WHATSAPP = '0_TkCKjPydUcEPn77_VA';   // acao "Contato" (clique no
 })();
 function trackConversion(label){
   if(!ADS_CONVERSION_ID || !label || typeof gtag === 'undefined') return;
-  gtag('event', 'conversion', { send_to: ADS_CONVERSION_ID + '/' + label, value: 1.0, currency: 'BRL' });
+  gtag('event', 'conversion', { send_to: ADS_CONVERSION_ID + '/' + label, value: 1.0, currency: 'BRL', transport_type: 'beacon' });
 }
 document.addEventListener('click', function(e){
   var a = e.target.closest ? e.target.closest('a[href*="wa.me"]') : null;
