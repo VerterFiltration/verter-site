@@ -2,24 +2,27 @@
    CONFIG GOOGLE ADS - preencheremos na etapa de conversoes.
    Cole o ID e os dois rotulos abaixo e recomite SO este arquivo.
    ================================================================ */
-var GOOGLE_ADS_ID = '';
-var CONV_LABEL_FORM = '';
-var CONV_LABEL_WHATSAPP = '';
+var GOOGLE_TAG_ID     = 'G-8VFQBZC7KX';  // tag do Google (ja preenchida)
+var ADS_CONVERSION_ID = '';             // 'AW-XXXXXXXXX'  <- falta
+var CONV_LABEL_FORM     = '';           // rotulo da acao "Formulario do site"
+var CONV_LABEL_WHATSAPP = '';           // rotulo da acao "Clique WhatsApp"
 
 (function(){
-  if(!GOOGLE_ADS_ID) return;
+  var idCarregar = GOOGLE_TAG_ID || ADS_CONVERSION_ID;
+  if(!idCarregar) return;
   var s = document.createElement('script');
   s.async = true;
-  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GOOGLE_ADS_ID;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + idCarregar;
   document.head.appendChild(s);
   window.dataLayer = window.dataLayer || [];
   window.gtag = function(){ dataLayer.push(arguments); };
   gtag('js', new Date());
-  gtag('config', GOOGLE_ADS_ID);
+  if(GOOGLE_TAG_ID)     gtag('config', GOOGLE_TAG_ID);
+  if(ADS_CONVERSION_ID) gtag('config', ADS_CONVERSION_ID);
 })();
 function trackConversion(label){
-  if(!GOOGLE_ADS_ID || !label || typeof gtag === 'undefined') return;
-  gtag('event', 'conversion', { send_to: GOOGLE_ADS_ID + '/' + label });
+  if(!ADS_CONVERSION_ID || !label || typeof gtag === 'undefined') return;
+  gtag('event', 'conversion', { send_to: ADS_CONVERSION_ID + '/' + label });
 }
 document.addEventListener('click', function(e){
   var a = e.target.closest ? e.target.closest('a[href*="wa.me"]') : null;
