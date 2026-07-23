@@ -1,11 +1,12 @@
 /* ================================================================
-   CONFIG GOOGLE ADS - preencheremos na etapa de conversoes.
-   Cole o ID e os dois rotulos abaixo e recomite SO este arquivo.
+   GOOGLE ADS - rastreamento de conversoes (CONFIGURADO)
+   Tag do Google:  G-8VFQBZC7KX
+   Conta Ads:      AW-17427070457
    ================================================================ */
-var GOOGLE_TAG_ID     = 'G-8VFQBZC7KX';  // tag do Google (ja preenchida)
-var ADS_CONVERSION_ID = '';             // 'AW-XXXXXXXXX'  <- falta
-var CONV_LABEL_FORM     = '';           // rotulo da acao "Formulario do site"
-var CONV_LABEL_WHATSAPP = '';           // rotulo da acao "Clique WhatsApp"
+var GOOGLE_TAG_ID       = 'G-8VFQBZC7KX';
+var ADS_CONVERSION_ID   = 'AW-17427070457';
+var CONV_LABEL_FORM     = 'jK7GCK2osNUcEPn77_VA';   // acao "Enviar formulario de lead"
+var CONV_LABEL_WHATSAPP = '0_TkCKjPydUcEPn77_VA';   // acao "Contato" (clique no WhatsApp)
 
 (function(){
   var idCarregar = GOOGLE_TAG_ID || ADS_CONVERSION_ID;
@@ -22,7 +23,7 @@ var CONV_LABEL_WHATSAPP = '';           // rotulo da acao "Clique WhatsApp"
 })();
 function trackConversion(label){
   if(!ADS_CONVERSION_ID || !label || typeof gtag === 'undefined') return;
-  gtag('event', 'conversion', { send_to: ADS_CONVERSION_ID + '/' + label });
+  gtag('event', 'conversion', { send_to: ADS_CONVERSION_ID + '/' + label, value: 1.0, currency: 'BRL' });
 }
 document.addEventListener('click', function(e){
   var a = e.target.closest ? e.target.closest('a[href*="wa.me"]') : null;
