@@ -769,6 +769,31 @@
     display:flex;align-items:center;justify-content:center;margin:0 auto 10px;
   }
   .blog-card .thumb .placeholder .ico svg{width:20px;height:20px;stroke:rgba(255,255,255,0.5)}
+  /* ---------- Imagens reais nos cards do blog ---------- */
+  .blog-featured .thumb img,
+  .blog-card .thumb img{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;z-index:3;display:block;
+    transition:transform 0.5s ease;
+  }
+  .blog-featured:hover .thumb img,
+  .blog-card:hover .thumb img{transform:scale(1.04)}
+  .blog-featured .thumb,
+  .blog-card .thumb{background-color:#13294b}
+
+  /* ---------- Imagens dentro do post ---------- */
+  .post-body-inner .post-cover{
+    width:100%;aspect-ratio:16/9;object-fit:cover;
+    border-radius:12px;margin:0 0 36px;display:block;
+  }
+  .post-body-inner .post-figura{
+    width:100%;height:auto;border-radius:12px;margin:32px 0;display:block;
+    border:1px solid var(--line);background:#fff;
+  }
+  @media(max-width:640px){
+    .post-body-inner .post-cover{aspect-ratio:4/3;margin-bottom:26px}
+  }
+
   .blog-card .content{padding:24px 26px;display:flex;flex-direction:column;flex:1}
   .blog-card h3{
     font-family:'Barlow Condensed';font-size:1.35rem;font-weight:700;color:var(--navy);

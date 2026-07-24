@@ -75,6 +75,7 @@ document.addEventListener('click', function(e){
   const posts = [
     {
       id:'pre-molhamento',
+      imagem:'/img/blog-pre-molhamento.jpg',
       titulo:'Pré-molhamento de Membranas Hidrofílicas: passo essencial para o teste de integridade',
       data:'21 de setembro de 2025',
       dataIso:'2025-09-21',
@@ -87,7 +88,6 @@ document.addEventListener('click', function(e){
       conteudo:`
         <p><em>Publicado por Verter — Setembro de 2025</em></p>
         <p>O pré-molhamento adequado de membranas hidrofílicas é uma etapa crítica para garantir a confiabilidade do teste de integridade. Sem esse processo, o usuário final pode se deparar com resultados falsos de falha, comprometendo tempo, recursos e até a segurança do processo produtivo.</p>
-        <div class="post-placeholder">[ Imagem ilustrativa do teste de integridade ]</div>
         <h2>O que é o Teste de Integridade?</h2>
         <p>O <strong>teste de integridade</strong> é uma etapa fundamental no controle de qualidade de filtros de membrana utilizados em processos críticos, como na indústria farmacêutica, biotecnológica, bebidas e microeletrônica. Seu objetivo principal é <strong>confirmar se a membrana está funcionando corretamente</strong> e se realmente é capaz de reter contaminantes microbiológicos ou partículas indesejadas.</p>
         <p>Trata-se de um <strong>ensaio não destrutivo</strong>, ou seja, o filtro pode ser utilizado após a validação. Isso é especialmente importante em processos estéreis, onde não há margem para riscos de falha.</p>
@@ -125,6 +125,7 @@ document.addEventListener('click', function(e){
     },
     {
       id:'reutilizar-filtro-esterilizante',
+      imagem:'/img/blog-reutilizar-filtro.jpg',
       titulo:'Reutilizar ou não um filtro esterilizante!',
       data:'30 de agosto de 2025',
       dataIso:'2025-08-30',
@@ -163,6 +164,7 @@ document.addEventListener('click', function(e){
     },
     {
       id:'melhor-membrana',
+      imagem:'/img/blog-melhor-membrana.jpg',
       titulo:'Qual a Melhor Membrana de Filtração para Processos Industriais',
       data:'9 de agosto de 2025',
       dataIso:'2025-08-09',
@@ -214,7 +216,305 @@ document.addEventListener('click', function(e){
       `
     },
     {
+      id:'quantos-filtros',
+      imagem:'/img/blog-quantos-filtros.jpg',
+      titulo:'Quantos filtros necessito no meu processo?',
+      data:'3 de agosto de 2025',
+      dataIso:'2025-08-03',
+      tempo:'3 min de leitura',
+      cat:'processo',
+      catNome:'Dimensionamento & Processo',
+      resumo:'Uma das primeiras perguntas que muitos clientes fazem ao avaliar soluções de filtração é: "Quantos filtros vou precisar?" Responder corretamente exige considerar diversos fatores técnicos — um guia rápido para compreender o dimensionamento de sistemas de filtração.',
+      tags:['Dimensionamento de filtros','Vazão','Tamanho de poro','Nominal vs absoluto','Pré-filtração','Perda de carga'],
+      conteudo:`
+        <p><em>Publicado por VERTER — Agosto de 2025</em></p>
+        <p>Uma das primeiras perguntas que muitos clientes fazem ao avaliar soluções de filtração é: <strong>"Quantos filtros necessito no meu processo?"</strong> Responder corretamente a essa pergunta exige considerar diversos fatores técnicos.</p>
+        <p>Cada processo de filtração é único — nenhum fluido ou lista de critérios de filtração é idêntico entre empresas. Até mesmo os contaminantes nos ingredientes podem variar entre lotes. Portanto, determinar a quantidade de filtros necessária começa com a coleta de informações sobre o fluido e os resultados desejados. Esses fatores costumam se sobrepor, tornando essencial o suporte de especialistas em filtração como a equipe técnica da VERTER.</p>
+        <h2>Como é o meu fluido?</h2>
+        <p>Composição química, viscosidade em temperatura operacional, carga de contaminantes e taxa de fouling são elementos críticos. Essas variáveis influenciam diretamente o tipo de filtro a ser utilizado.</p>
+        <p>Por exemplo, quando o objetivo é minimizar perdas de proteínas em líquidos aquosos, membranas de <strong>PES (Polietersulfona)</strong> são ideais devido à sua baixa adsorção proteica. Já em processos com solventes, o <strong>Nylon 6,6</strong> é preferido pela alta resistência química.</p>
+        <p>Além disso, o nível de filtração necessário determina o tamanho de poro adequado. A quantidade e o tamanho das partículas contaminantes podem ser mensuráveis, possibilitando escolher a micragem ideal sem provocar pré-entupimento. Dependendo da carga de contaminação, pode ser necessário incluir pré-filtração, reduzindo a quantidade total de filtros por meio de um estágio anterior de retenção.</p>
+        <h2>Qual o meu objetivo na filtração?</h2>
+        <p>Os objetivos de filtração definem o tipo de filtro necessário. Cada filtro é projetado para reter contaminantes específicos:</p>
+        <ul>
+          <li>Remoção de partículas / clarificação</li>
+          <li>Redução ou controle bacteriano</li>
+          <li>Filtração estéril</li>
+        </ul>
+        <p>As exigências de retenção determinam o tamanho de poro, especialmente em casos com micro-organismos específicos. Veja exemplos de poros recomendados:</p>
+        <ul>
+          <li><strong>0,03 µm</strong> — <em>Acholeplasma laidlawii</em></li>
+          <li><strong>0,10 µm</strong> — <em>Brevundimonas diminuta</em></li>
+          <li><strong>0,22 µm</strong> — <em>Brevundimonas diminuta</em></li>
+          <li><strong>0,45 µm</strong> — <em>Serratia marcescens</em></li>
+          <li><strong>0,65 µm</strong> — <em>Saccharomyces cerevisiae</em></li>
+        </ul>
+        <h3>Classificação do tamanho de poro: nominal vs. absoluto</h3>
+        <p>A eficácia do filtro é classificada como:</p>
+        <ul>
+          <li><strong>Nominal:</strong> retém entre 60% e 90% das partículas do tamanho especificado. Comum em filtros de profundidade.</li>
+          <li><strong>Absoluto:</strong> retém 99,999% das partículas — classificação típica de membranas.</li>
+        </ul>
+        <p>A seleção entre esses dois depende dos critérios de segurança e pureza do seu processo.</p>
+        <h3>Materiais de construção</h3>
+        <p>De extrema importância: a composição do filtro, meio filtrante, núcleo, estrutura externa (gaiola) e vedações devem atender aos requisitos do sistema, como temperatura e, principalmente, sua compatibilidade química.</p>
+        <h3>Vazão requerida</h3>
+        <p>Para processos contínuos, é fundamental conhecer a vazão desejada. Para processos em batelada, o cálculo depende do volume e do tempo de filtração.</p>
+        <p><strong>Exemplo:</strong> para filtrar um lote de 3.000 litros em 4 horas — 750 L/h, ou 12,5 L/min. Esse valor serve como base para calcular a quantidade de filtros.</p>
+        <h3>Pressão do sistema</h3>
+        <p>O filtro é uma barreira mecânica e há a necessidade de uma pressão disponível para vencer esta barreira. À medida que os poros bloqueiam, a pressão diferencial do filtro (pressão de entrada menos a pressão de saída) vai aumentando. Ter pressão suficiente para vencer todas as etapas é crucial para um equilíbrio perfeito do sistema.</p>
+        <p>Em geral, os fabricantes fornecem um gráfico onde se verifica a vazão do elemento filtrante em função da perda de carga ou diferencial.</p>
+        <p>O gráfico abaixo mostra um exemplo, relacionando a vazão de líquido com a perda de carga para diferentes tamanhos de poro:</p>
+        <img src="/img/blog-quantos-filtros-grafico.png" alt="Gráfico de vazão FGFP por 10 polegadas: perda de carga em kPa e PSI versus vazão de líquido em LPM, com curvas de 0,1 µm a 20 µm" class="post-figura">
+        <h2>Conclusão</h2>
+        <p>Responder à pergunta <strong>"Quantos filtros necessito?"</strong> depende de uma análise técnica do processo. Em alguns casos, uma estimativa básica resolve. Em outros, testes são essenciais para otimizar a filtração e garantir desempenho ideal.</p>
+        <p>Na <strong>VERTER</strong>, combinamos conhecimento técnico e experiência prática para ajudá-lo a escolher os filtros ideais e dimensionar corretamente o sistema. Nossa equipe de especialistas está pronta para orientar desde a seleção até a validação de desempenho.</p>
+      `
+    },
+    {
+      id:'agua-alimentos-bebidas',
+      imagem:'/img/blog-agua-alimentos-bebidas.jpg',
+      titulo:'Filtração de Água no Processamento de Alimentos e Bebidas',
+      data:'26 de julho de 2025',
+      dataIso:'2025-07-26',
+      tempo:'2 min de leitura',
+      cat:'bebidas',
+      catNome:'Indústria de Bebidas',
+      resumo:'Na VERTER, desenvolvemos soluções completas em filtração de água — desde a fonte até o envase — que asseguram pureza microbiológica e físico-química para os mais altos padrões da indústria.',
+      tags:['Água de processo','Controle microbiológico','Endotoxinas','Osmose reversa','Carvão ativado','Filtração de CO₂'],
+      conteudo:`
+        <p><em>Publicado por VERTER — Julho de 2025</em></p>
+        <h2>Como a VERTER garante pureza, segurança e eficiência em cada etapa da sua produção</h2>
+        <p>No setor de alimentos e bebidas, a <strong>qualidade da água de processo</strong> impacta diretamente a segurança, o sabor, a cor e a estabilidade do produto final. Na VERTER, desenvolvemos soluções completas em filtração de água — desde a fonte até o envase — que asseguram pureza microbiológica e físico-química para os mais altos padrões da indústria.</p>
+        <h2>Por que filtrar a água?</h2>
+        <p>A água pode carregar impurezas invisíveis que:</p>
+        <ul>
+          <li>Alteram o sabor, odor e aparência dos produtos;</li>
+          <li>Contaminam tanques, tubulações e insumos;</li>
+          <li>Causam falhas em membranas e bombas;</li>
+          <li>Comprometem a validade e segurança alimentar.</li>
+        </ul>
+        <p>A filtração é essencial para remover bactérias, leveduras, mofos, endotoxinas, cloro, finos de carvão e partículas insolúveis que escapam de outras tecnologias como osmose reversa, UV ou destilação.</p>
+        <h2>Etapas da filtração de água com tecnologia VERTER</h2>
+        <h3>1. Controle microbiológico (bioburden e esterilização)</h3>
+        <ul>
+          <li>Filtros com membrana PES (0,22 µm ou 0,10 µm) para retenção de <em>Lactobacillus</em>, <em>Saccharomyces</em>, <em>Aspergillus</em>, entre outros.</li>
+          <li>Modelos validados conforme exigências da FDA (grau esterilizante).</li>
+          <li>Alternativas com camadas simples ou duplas e cápsulas pré-esterilizadas.</li>
+        </ul>
+        <h3>2. Remoção de endotoxinas</h3>
+        <ul>
+          <li>Após tratamento UV, endotoxinas podem permanecer.</li>
+          <li>Filtros com carga positiva (Nylon 6,6) eliminam esses resíduos bacterianos com alta eficiência.</li>
+        </ul>
+        <h3>3. Filtração de partículas e filtros de carvão</h3>
+        <ul>
+          <li>Filtros profundidade ou spun para partículas de 1 a 100 µm.</li>
+          <li>Filtros de carvão ativado (granular ou bloco) removem cloro e compostos orgânicos.</li>
+          <li>Finos de carvão ou resina são retidos por filtros dedicados para proteger o sistema.</li>
+        </ul>
+        <h3>4. Pré-filtração para osmose reversa (RO)</h3>
+        <ul>
+          <li>A filtração prévia evita incrustações nas membranas e reduz custos operacionais.</li>
+          <li>A escolha do filtro ideal depende da carga contaminante da água de entrada.</li>
+        </ul>
+        <h3>5. Filtração de ar e gases de processo</h3>
+        <ul>
+          <li>Filtros hidrofóbicos de PTFE esterilizam ar ou gases como CO₂ e N₂ usados em tanques ou linhas de envase.</li>
+          <li>Garantem que nenhum microrganismo entre no sistema via pressão negativa ou gases contaminados.</li>
+        </ul>
+        <h2>Benefícios das soluções VERTER</h2>
+        <ul>
+          <li>Aumento da vida útil de membranas e equipamentos</li>
+          <li>Redução de intervenções técnicas e trocas de filtro</li>
+          <li>Água de processo com padrão microbiológico controlado</li>
+          <li>Segurança do produto final e preservação da marca</li>
+          <li>Suporte técnico especializado em aplicações para alimentos e bebidas</li>
+        </ul>
+        <h2>Quer melhorar sua água de processo?</h2>
+        <p>Se sua empresa deseja produzir sua própria água purificada ou otimizar o sistema atual, a VERTER pode ajudar. Nossa equipe técnica realiza análise de risco, recomendações de filtros, validações e documentação técnica.</p>
+      `
+    },
+    {
+      id:'filtracao-cerveja',
+      imagem:'/img/blog-filtracao-cerveja.jpg',
+      titulo:'Filtração de Cerveja: Soluções Verter para uma Produção Cristalina e Consistente',
+      data:'20 de julho de 2025',
+      dataIso:'2025-07-20',
+      tempo:'4 min de leitura',
+      cat:'bebidas',
+      catNome:'Indústria de Bebidas',
+      resumo:'A filtração é uma etapa crítica no processo cervejeiro, impactando diretamente a aparência, sabor, estabilidade e durabilidade da bebida. A Verter oferece tecnologias avançadas para atender desde produtores artesanais até grandes cervejarias industriais.',
+      tags:['Filtração de cerveja','Cartuchos lenticulares','Filtração a frio','Terra diatomácea','Clarificação','Polimento final'],
+      conteudo:`
+        <p><em>Publicado por Verter Filtração | Atualizado em Julho de 2025</em></p>
+        <p>A filtração é uma etapa crítica no processo cervejeiro, impactando diretamente na aparência, sabor, estabilidade e durabilidade da bebida. A <strong>Verter Filtração</strong> oferece tecnologias avançadas para atender desde produtores artesanais até grandes cervejarias industriais.</p>
+        <h2>Por que filtrar a cerveja?</h2>
+        <p>Além de remover partículas visíveis, microrganismos e compostos que causam turbidez, a filtração proporciona:</p>
+        <ul>
+          <li>Aparência cristalina e brilho atrativo</li>
+          <li>Sabor e aroma estáveis</li>
+          <li>Maior prazo de validade</li>
+          <li>Estabilidade microbiológica</li>
+          <li>Consistência entre os lotes</li>
+        </ul>
+        <h2>Tecnologias de filtração</h2>
+        <h3>1. Filtração superficial (cartuchos e placas)</h3>
+        <p>Usa cartuchos ou placas de profundidade compostas por celulose, polipropileno ou materiais combinados para reter partículas maiores.</p>
+        <p><strong>Soluções Verter:</strong> cartuchos plissados Melt Blown, placas e módulos lenticulares, carcaças sanitárias em inox.</p>
+        <p><strong>Vantagens:</strong> econômica e simples de operar, boa remoção de sólidos grosseiros, substituição fácil dos elementos.</p>
+        <p><strong>Limitações:</strong> pode exigir pré-filtração e trocas frequentes em processos com alta carga de sólidos.</p>
+        <h3>2. Filtração por "cake" (torta) com auxiliares filtrantes</h3>
+        <p>Forma-se uma camada filtrante com terras diatomáceas ou perlita sobre uma tela. A cerveja passa por essa torta, que retém as impurezas.</p>
+        <p><strong>Soluções Verter:</strong> sistemas de placas com suporte para auxiliares, filtros de camada com placas de celulose, acompanhamento técnico para dosagem e limpeza.</p>
+        <p><strong>Vantagens:</strong> alta retenção de partículas finas, excelente nível de clarificação final, adaptável a diferentes estilos de cerveja.</p>
+        <p><strong>Limitações:</strong> processo trabalhoso e menos automatizado, pode gerar resíduos e necessita controle rigoroso de operação.</p>
+        <h3>3. Filtração a frio</h3>
+        <p>A cerveja é resfriada quase até o ponto de congelamento, causando a aglutinação de proteínas e polifenóis, que são posteriormente removidos por filtração.</p>
+        <p><strong>Soluções Verter:</strong> cartuchos de 0,45 e 0,65 µm para polimento, filtros esterilizantes de 0,2 µm, equipamentos térmicos com isolamento e controle.</p>
+        <p><strong>Vantagens:</strong> excelente remoção de turbidez, redução eficaz de proteínas e compostos fenólicos, fácil automação em linhas industriais.</p>
+        <p><strong>Limitações:</strong> pode remover também compostos desejáveis de sabor, requer investimento em refrigeração e tem custo operacional elevado.</p>
+        <h3>4. Soluções para cervejeiros artesanais</h3>
+        <p>A Verter oferece soluções acessíveis, práticas e modulares para pequenos volumes, mantendo o padrão de qualidade dos sistemas industriais.</p>
+        <p><strong>Soluções Verter:</strong> kits com bomba, cartucho e carcaça; filtros cápsula prontos para uso (RTU); acessórios como válvulas, manômetros e conexões sanitárias.</p>
+        <p><strong>Vantagens:</strong> fácil de instalar e utilizar, baixo investimento inicial, ideal para trasfegas, clarificação e polimento final.</p>
+        <p><strong>Limitações:</strong> capacidade limitada, pode exigir upgrades conforme o crescimento da produção.</p>
+        <h2>Etapas da filtração com a Verter</h2>
+        <p>A filtração pode ser aplicada em diferentes fases do processo cervejeiro:</p>
+        <ul>
+          <li><strong>Pós-fermentação:</strong> remoção de levedura e resíduos</li>
+          <li><strong>Pós-maturação:</strong> clarificação e ajuste de brilho</li>
+          <li><strong>Pré-envase:</strong> polimento microbiológico e estabilidade final</li>
+        </ul>
+        <p>Com a Verter, é possível montar uma linha de filtração modular e escalável, adaptada ao estilo da cerveja e ao volume de produção.</p>
+        <h2>Conclusão</h2>
+        <p>A filtração é essencial para uma cerveja de qualidade premium. Com a expertise da <strong>Verter Filtração</strong>, sua produção — seja artesanal ou industrial — ganha eficiência, segurança e excelência sensorial.</p>
+        <h2>Perguntas frequentes</h2>
+        <h3>Por que é importante filtrar a cerveja?</h3>
+        <p>A filtração melhora o apelo visual, o sabor, o aroma, a consistência e a vida útil da cerveja, garantindo um produto de alta qualidade e agradável ao consumidor.</p>
+        <h3>O que é utilizado na filtração da cerveja?</h3>
+        <p>Os métodos mais comuns incluem filtração superficial, filtração por camada ("cake") e filtração a frio, cada um empregando técnicas e materiais distintos para remover partículas e compostos que causam turbidez.</p>
+        <h3>Como a cerveja é filtrada?</h3>
+        <p>Após a fermentação e a clarificação, a cerveja é direcionada a um sistema de filtração. Podem ser aplicados um ou mais métodos, dependendo do estilo da cerveja, do grau de claridade desejado e da escala da operação.</p>
+        <h3>O que a filtração remove da cerveja?</h3>
+        <p>O processo visa remover células de levedura, proteínas, polifenóis, microrganismos e partículas maiores como resíduos de lúpulo e grãos, melhorando a aparência, o sabor e a estabilidade da bebida.</p>
+        <h3>Como dimensionar o processo de filtração?</h3>
+        <p>Os métodos e equipamentos variam conforme o porte da produção. Desde grandes cervejarias industriais até setups artesanais, a escolha da tecnologia deve levar em conta o volume, o orçamento e a complexidade desejada.</p>
+      `
+    },
+    {
+      id:'fda-usp-nsf',
+      imagem:'/img/blog-fda-usp-nsf.jpg',
+      titulo:'Você Sabe as Diferenças entre FDA, USP e NSF?',
+      data:'13 de julho de 2025',
+      dataIso:'2025-07-13',
+      tempo:'4 min de leitura',
+      cat:'conformidade',
+      catNome:'Conformidade Regulatória',
+      resumo:'Filtros utilizados nas indústrias alimentícia, de bebidas e farmacêutica devem estar em conformidade com as diretrizes desses setores. Entenda o que cada uma das três entidades regula e o que exigir do seu fornecedor.',
+      tags:['FDA','USP Classe VI','NSF/ANSI','21 CFR','Drug Master File','Conformidade'],
+      conteudo:`
+        <p><em>Publicado por VERTER — Julho de 2025</em></p>
+        <p>Filtros utilizados nas indústrias alimentícia, de bebidas e farmacêutica devem estar em conformidade com as diretrizes e normas relevantes desses setores. Para que isso ocorra, o filtro normalmente deve ser testado de acordo com métodos padrão de ensaio, ou os componentes devem ser testados conforme prescrito por uma entidade reconhecida. Essas diretrizes são estabelecidas por várias organizações, incluindo a Administração de Alimentos e Medicamentos dos EUA (FDA), a Farmacopeia dos Estados Unidos (USP) e a NSF International.</p>
+        <h2>FDA</h2>
+        <p>O FDA, uma agência do Departamento de Saúde e Serviços Humanos dos EUA, é responsável por garantir que alimentos, cosméticos e produtos eletrônicos sejam seguros, e que medicamentos humanos e veterinários, produtos biológicos e dispositivos médicos sejam seguros e eficazes.</p>
+        <p>Embora os filtros e sua fabricação não sejam monitorados diretamente pela FDA, os processos nos quais eles são utilizados podem estar sujeitos à revisão do órgão. Como os filtros entram em contato com alimentos e medicamentos, há padrões aplicáveis.</p>
+        <p>O Código de Regulamentos Federais (CFR) é um conjunto de regras gerais e permanentes publicado pelos departamentos e agências executivas do Governo Federal dos EUA. O <strong>Título 21 do CFR</strong> é reservado para as regras da FDA e é revisado uma vez por ano.</p>
+        <p>Para filtros utilizados na fabricação de alimentos e bebidas, as partes <strong>174</strong> (Aditivos Indiretos em Alimentos — Geral) e <strong>177</strong> (Aditivos Indiretos em Alimentos — Polímeros) são relevantes. Essas seções descrevem os materiais permitidos para contato com alimentos, bem como os métodos para determinar suas características.</p>
+        <p>Importante ressaltar que <strong>o FDA não testa nem aprova filtros</strong>. Em vez disso, um filtro é considerado conforme ao FDA se todos os materiais de construção estiverem listados no CFR apropriado. Usuários finais nos setores alimentício, de bebidas e farmacêutico exigem produtos compostos exclusivamente por materiais listados pelo FDA.</p>
+        <p>O 21 CFR 314.420 também trata do <strong>Drug Master File (DMF)</strong> — um dossiê enviado ao FDA que pode conter informações confidenciais sobre instalações, processos ou materiais utilizados na fabricação, processamento, embalagem e armazenamento de um medicamento. O envio de um DMF não é exigido por lei, não impõe requisitos obrigatórios e não é aprovado ou rejeitado pelo FDA. Ele permite que um fabricante de filtros forneça informações a uma farmacêutica sem revelar o conteúdo completo do dossiê.</p>
+        <h2>USP</h2>
+        <p>A United States Pharmacopeia (USP) é uma organização de saúde pública, não governamental e sem fins lucrativos, que atua como autoridade oficial na definição de padrões públicos para todos os medicamentos prescritos e de venda livre, além de outros produtos de saúde fabricados ou comercializados nos Estados Unidos.</p>
+        <p>A USP também estabelece padrões para ingredientes alimentares, suplementos dietéticos e materiais que entram em contato com alimentos durante o processo de fabricação ou como materiais de embalagem. Os padrões de referência são atualizados nas monografias oficiais da USP-NF, e esses padrões e procedimentos são aplicáveis pela FDA. Desde 2002, são publicados anualmente.</p>
+        <p>Para filtros compostos principalmente por peças plásticas, a seção relevante é o <strong>Capítulo 88, "Testes de Reatividade Biológica", Classificação In Vivo de Plásticos (Classe I a VI)</strong>. Os testes consistem em três partes: injeção sistêmica intravenosa, teste intracutâneo e teste de implantação. Clientes das áreas farmacêutica e biotecnológica geralmente buscam filtros que atendam às diretrizes da USP.</p>
+        <h2>NSF</h2>
+        <p>A NSF International é uma organização não governamental e sem fins lucrativos que estabelece padrões para desenvolvimento, certificação de produtos, educação e gestão de riscos voltados à saúde pública e segurança nos setores de alimentos, água, ar interior e meio ambiente.</p>
+        <p>Para fins de filtração, esses padrões se aplicam principalmente ao tratamento de água municipal, sistemas de tratamento de água residencial e filtração de água engarrafada. Os três padrões mais comumente aplicáveis a filtros de processo são:</p>
+        <ul>
+          <li><strong>NSF/ANSI 42 — Tratamento de Água Potável, Efeitos Estéticos:</strong> cobre sistemas de ponto de uso (POU) e ponto de entrada (POE) projetados para reduzir contaminantes estéticos ou não relacionados à saúde (cloro, sabor, odor e partículas). Embora aplicado principalmente a sistemas residenciais, os testes de extração são semelhantes aos do NSF 61 e têm relevância para filtros de processo.</li>
+          <li><strong>NSF/ANSI 53 — Tratamento de Água Potável, Efeitos à Saúde:</strong> também voltado a sistemas POU e POE, aborda a redução de contaminantes que afetam a saúde, como <em>Cryptosporidium</em>, <em>Giardia</em>, chumbo, compostos orgânicos voláteis (VOCs) e MTBE. É frequentemente citado para demonstrar a capacidade dos filtros de remover cistos.</li>
+          <li><strong>NSF/ANSI 61 — Componentes de Sistemas de Água Potável, Efeitos à Saúde:</strong> estabelece requisitos mínimos para contaminantes químicos e impurezas que podem ser transferidos para a água potável. Avalia a segurança sanitária de materiais, componentes, produtos ou sistemas que entram em contato com a água potável.</li>
+        </ul>
+        <h2>Conclusão</h2>
+        <p>Com base nas normas e diretrizes estabelecidas pela USP, FDA e NSF, é fundamental escolher filtros que atendam aos mais altos padrões de segurança, eficácia e conformidade regulatória — especialmente em aplicações críticas nos setores alimentício, farmacêutico e de bebidas.</p>
+        <p>A VERTER compreende profundamente os requisitos técnicos dessas certificações e está preparada para orientar seus clientes na escolha do elemento filtrante mais adequado a cada processo.</p>
+      `
+    },
+    {
+      id:'puredisc-bds2',
+      imagem:'/img/blog-puredisc-bds2.jpg',
+      titulo:'Como os Filtros Retrolaváveis PureDisc™ BDS2 Aumentam a Vida Útil e a Eficiência na Filtração Industrial',
+      data:'7 de julho de 2025',
+      dataIso:'2025-07-07',
+      tempo:'2 min de leitura',
+      cat:'processo',
+      catNome:'Dimensionamento & Processo',
+      resumo:'O módulo de filtro reversível BDS2 é uma alternativa eficiente ao Supradisc II da Pall. Ideal para bebidas, xaropes e aplicações farmacêuticas, com retrolavagem, alto rendimento e esterilização in-place.',
+      tags:['PureDisc BDS2','Retrolavagem','Módulo lenticular','Supradisc II','Clarificação','SIP'],
+      conteudo:`
+        <p><em>Publicado por VERTER — Julho de 2025</em></p>
+        <p>Descubra como os módulos de filtro reversíveis PureDisc™ BDS2 oferecem alta eficiência, possibilidade de retrolavagem e desempenho superior na filtração de bebidas e aplicações farmacêuticas.</p>
+        <h2>Os desafios da filtração em bebidas e farmacêuticos</h2>
+        <p>Na indústria de alimentos, bebidas e farmacêutica, é comum lidar com partículas finas suspensas em óleos, xaropes, vinhos e cervejas. Para alcançar a clarificação, a redução de biocarga e o polimento do produto, filtros eficientes são fundamentais. No entanto, os módulos empilhados tradicionais costumam ter limitações: entopem com facilidade, deformam durante a esterilização e não permitem retrolavagem — o que compromete sua vida útil.</p>
+        <h2>O que é o PureDisc™ BDS2?</h2>
+        <p>O <strong>PureDisc™ BDS2</strong> é um módulo de filtro reversível de alto desempenho, projetado para superar os problemas dos discos empilhados convencionais. Com estrutura reforçada, vedação individual e projeto que permite retrolavagem, ele garante alta integridade mecânica e maior capacidade de retenção de contaminantes.</p>
+        <h3>Benefícios técnicos do BDS2</h3>
+        <ul>
+          <li>Retrolavagem com água ou produto: prolonga a vida útil do módulo em até 50%</li>
+          <li>Esterilizável por SIP até 125 °C e sanitizável com água quente</li>
+          <li>Suporta contrapressão e vácuo sem deformação</li>
+          <li>Compatível com carcaças padrão de mercado</li>
+          <li>Estrutura firme, fácil de instalar e remover</li>
+        </ul>
+        <h2>Aplicações industriais</h2>
+        <h3>Alimentos e bebidas</h3>
+        <ul>
+          <li>Clarificação e polimento de vinhos, cervejas e destilados</li>
+          <li>Filtração de sucos concentrados, xaropes e óleos comestíveis</li>
+          <li>Retirada de partículas em chás e bebidas à base de frutas</li>
+        </ul>
+        <h3>Farmacêutica e biotecnologia</h3>
+        <ul>
+          <li>Pré-filtração de ingredientes ativos (APIs)</li>
+          <li>Clarificação de enzimas, vacinas e gelatinas líquidas</li>
+          <li>Etapas anteriores à filtração estéril final</li>
+        </ul>
+        <h2>Uma alternativa competitiva ao Supradisc II da Pall</h2>
+        <p>Se sua operação já utiliza o <strong>Supradisc II da Pall</strong>, o BDS2 é uma alternativa altamente compatível — com desempenho equivalente ou superior, custo mais acessível e vida útil estendida graças à retrolavagem.</p>
+        <p>A equipe da Verter está pronta para ajudar você a testar o PureDisc™ BDS2 em sua operação.</p>
+      `
+    },
+    {
+      id:'limpar-membrana-pes',
+      imagem:'/img/blog-limpar-membrana-pes.jpg',
+      titulo:'Como Limpar Filtros de Membrana em Polietersulfona PAA® e PAB® com Peróxido de Hidrogênio e Ácido Peracético',
+      data:'6 de julho de 2025',
+      dataIso:'2025-07-06',
+      tempo:'2 min de leitura',
+      cat:'esterilizante',
+      catNome:'Filtração Esterilizante',
+      resumo:'Os filtros de membrana são peças-chave na produção de bebidas seguras e de alta qualidade. A limpeza inadequada compromete o desempenho e aumenta os custos — veja como garantir máxima performance com um processo eficaz de sanitização.',
+      tags:['Limpeza de membranas','Ácido peracético','Peróxido de hidrogênio','CIP','Ponto de bolha','Filtros PES'],
+      conteudo:`
+        <p><em>Publicado por Verter — Julho de 2025</em></p>
+        <h2>Introdução</h2>
+        <p>Os filtros de membrana são peças-chave na produção de bebidas seguras e de alta qualidade. No entanto, a limpeza inadequada pode comprometer o desempenho e aumentar os custos. A seguir, explicamos como garantir máxima performance dos filtros PAA® e PAB® com um processo eficaz de sanitização.</p>
+        <h2>Por que os filtros entopem?</h2>
+        <p>O entupimento não ocorre apenas por partículas visíveis, mas por <strong>substâncias coloidais</strong> — como proteínas, beta-glucanas, carboidratos e taninos presentes no malte ou em bebidas à base de frutas — que gradualmente reduzem o diâmetro dos poros da membrana, tornando o filtro ineficiente com o tempo.</p>
+        <h2>Etapa 1 — Lavagem com água morna</h2>
+        <p>A limpeza diária com água morna (<strong>55 °C</strong>) ajuda a dissolver e remover essas substâncias da superfície da membrana, prolongando a vida útil do filtro e reduzindo a elevação da pressão diferencial. Porém, essa etapa isolada não é suficiente para desobstruir os poros internos.</p>
+        <h2>Etapa 2 — Limpeza química com peróxido + ácido peracético</h2>
+        <p>Para uma limpeza mais eficiente, recomenda-se complementar o enxágue com uma solução de limpeza química à base de <strong>peróxido de hidrogênio e ácido peracético</strong>. Esses agentes oxidantes penetram nos poros da membrana, degradando os resíduos orgânicos e oferecendo ação biocida.</p>
+        <p>Testes laboratoriais comprovam que os filtros PAA® e PAB® resistem com segurança a soluções diluídas (até <strong>1,5% v/v</strong>) desses agentes por até <strong>144 horas contínuas</strong>, sem comprometer seu ponto de bolha nem as características de fluxo.</p>
+        <h2>Passo a passo resumido</h2>
+        <img src="/img/blog-limpar-membrana-pes-passos.png" alt="Passo a passo resumido da limpeza de filtros de membrana em polietersulfona" class="post-figura">
+        <h2>Conclusão</h2>
+        <p>A limpeza adequada dos filtros PAA® e PAB® com agentes à base de peróxido e ácido peracético é essencial para garantir desempenho contínuo, evitar obstruções irreversíveis e manter os processos de filtração dentro dos padrões exigidos pela indústria de bebidas.</p>
+      `
+    },
+    {
       id:'como-proteger-cerveja',
+      imagem:'/img/blog-proteger-cerveja.jpg',
       titulo:'Como Proteger a Qualidade da Cerveja Removendo Organismos de Deterioração',
       data:'4 de julho de 2025',
       dataIso:'2025-07-04',
@@ -249,7 +549,44 @@ document.addEventListener('click', function(e){
       `
     },
     {
+      id:'oxitetraciclina',
+      imagem:'/img/blog-oxitetraciclina.jpg',
+      titulo:'Desafios na Filtração da Oxitetraciclina Injetável: Eficiência e Esterilidade',
+      data:'3 de julho de 2025',
+      dataIso:'2025-07-03',
+      tempo:'3 min de leitura',
+      cat:'farmaceutica',
+      catNome:'Indústria Farmacêutica',
+      resumo:'A filtração de soluções injetáveis veterinárias representa um grande desafio técnico, sobretudo em formulações complexas como a oxitetraciclina. Veja os principais fatores que tornam esse processo crítico e como superá-los.',
+      tags:['Oxitetraciclina','Injetáveis veterinários','Viscosidade','Scale-up','Filtração 0,2 µm','Lenticular'],
+      conteudo:`
+        <p><em>Publicado por VERTER — Julho de 2025</em></p>
+        <p>A filtração de soluções injetáveis veterinárias representa um grande desafio técnico, sobretudo em formulações complexas como a oxitetraciclina. Este antibiótico de uso amplo no setor agropecuário exige um sistema de filtração projetado sob critérios específicos de viscosidade, compatibilidade química e exigências regulatórias.</p>
+        <h2>1. Complexidade da formulação: muito além da viscosidade</h2>
+        <p>A oxitetraciclina apresenta uma composição viscosa, frequentemente enriquecida com quelantes e excipientes que aumentam a carga de contaminantes sólidos.</p>
+        <p>Durante a diluição da matéria-prima ativa, é comum a formação de partículas de baixa densidade que não se sedimentam facilmente, exigindo repouso prolongado para decantação no tanque de formulação.</p>
+        <p>Esse comportamento impacta diretamente a escolha dos elementos filtrantes, principalmente os pré-filtros, que devem lidar com altas cargas particuladas sem comprometer a vazão ou colmatar precocemente.</p>
+        <h2>2. Variações de viscosidade e suas implicações</h2>
+        <p>Dependendo da origem da matéria-prima, a viscosidade da solução pode alcançar até <strong>40 cP</strong> — valor consideravelmente superior à da água (1 cP), usada como referência padrão nos testes de curva de perda de carga de cartuchos filtrantes.</p>
+        <p>Se não houver compensações técnicas adequadas, isso implicaria na necessidade de <strong>superdimensionar a área de filtração em até 40 vezes</strong> para se obter a mesma performance observada em testes com água purificada (WFI).</p>
+        <h2>3. Estratégias de mitigação: aquecimento controlado e ambiente inerte</h2>
+        <p>Uma abordagem comum para redução da viscosidade é o aquecimento leve da solução. No entanto, temperaturas superiores a <strong>45 °C</strong> podem comprometer a integridade e a eficácia do princípio ativo. Isso exige um controle térmico rigoroso e conhecimento profundo sobre o comportamento físico-químico do produto.</p>
+        <p>Além disso, o ambiente de formulação precisa ser <strong>quimicamente inerte</strong>, especialmente para evitar reações de oxidação que podem degradar o fármaco ou gerar subprodutos indesejados.</p>
+        <h2>4. Exigência regulamentar: filtração esterilizante com membrana de 0,2 µm</h2>
+        <p>Por se tratar de um <strong>produto injetável</strong>, a última etapa do processo deve obrigatoriamente utilizar <strong>filtros esterilizantes de 0,2 µm</strong>, capazes de reter microrganismos e garantir a segurança do produto final.</p>
+        <p>Essa exigência reforça a importância da escolha correta de pré-filtros, pois a carga particulada remanescente não pode sobrecarregar o filtro final, sob pena de comprometer o processo produtivo e a conformidade regulatória.</p>
+        <h2>5. Recomendação técnica: testes de scale-up e otimização gradual</h2>
+        <p>Dada a quantidade de variáveis envolvidas, é altamente recomendado que o sistema de filtração seja desenvolvido por meio de <strong>testes em escala piloto</strong> (scale-up), permitindo ajustes finos na configuração de pré-filtros (micragem, número de camadas, materiais) até se atingir o equilíbrio ideal entre retenção, vazão e integridade do produto.</p>
+        <p>Esse processo iterativo, embora mais demorado, reduz significativamente o risco de falhas em escala industrial e promove maior eficiência ao longo do ciclo de vida do filtro.</p>
+        <h2>Conclusão</h2>
+        <p>A filtração da oxitetraciclina injetável demanda uma abordagem técnica altamente especializada. A combinação de elevada viscosidade, sensibilidade térmica, presença de partículas instáveis e necessidade de filtração esterilizante cria um cenário desafiador que não permite soluções genéricas.</p>
+        <p>Em geral, um sistema com <strong>três estágios de filtração</strong> é necessário, sendo o ponto crítico o estágio intermediário — geralmente preenchido por elementos do tipo lenticular, com capacidade de retenção de materiais coloidais.</p>
+        <p>Investir em um sistema bem dimensionado, com testes em escala reduzida e suporte técnico qualificado, é essencial para assegurar qualidade, conformidade e desempenho consistente na produção deste antibiótico vital para a medicina veterinária.</p>
+      `
+    },
+    {
       id:'vent-filters',
+      imagem:'/img/blog-vent-filters.jpg',
       titulo:'Filtração Estéril em Tanques e Gases de Processo: Filtros de Respiro (Vent Filters)',
       data:'27 de junho de 2025',
       dataIso:'2025-06-27',
@@ -289,64 +626,8 @@ document.addEventListener('click', function(e){
       `
     },
     {
-      id:'pre-filtro-correto',
-      titulo:'Qual o pré-filtro correto para minha aplicação?',
-      data:'28 de maio de 2025',
-      dataIso:'2025-05-28',
-      tempo:'3 min de leitura',
-      cat:'processo',
-      catNome:'Dimensionamento & Processo',
-      resumo:'Selecionar o tamanho de poro e a eficiência de remoção adequados para um pré-filtro é fundamental para garantir desempenho ideal. Entenda as diferenças entre classificação nominal e absoluta, e como não cometer erros na substituição.',
-      tags:['Pré-filtro','Classificação nominal','Classificação absoluta','Dimensionamento','Vazão'],
-      conteudo:`
-        <p><em>Tempo de leitura: 3 minutos</em></p>
-        <p>Selecionar o tamanho de poro e a eficiência de remoção adequados para um pré-filtro — seja para um novo sistema ou como substituição — é fundamental para garantir um desempenho ideal. Esse processo exige informações detalhadas sobre o fluido a ser filtrado, o tipo de filtro que será protegido, a vazão esperada e a capacidade de filtragem (throughput).</p>
-        <p>Ao substituir um pré-filtro, é importante entender que os fabricantes podem classificar os tamanhos de poro e o desempenho de forma diferente. Solicitar simplesmente um "pré-filtro de 0,45 micra" a outro fornecedor pode não resultar em um produto equivalente.</p>
-        <h3>Pré-Filtração Nominal vs. Absoluta</h3>
-        <p>Filtros para líquidos geralmente são classificados como <strong>absolutos</strong> (removem praticamente todas as partículas acima do tamanho de poro especificado) ou <strong>nominais</strong> (removem algumas ou a maioria das partículas acima dessa classificação).</p>
-        <p>Se o pré-filtro existente possui classificação absoluta, a substituição é relativamente simples. Filtros com classificação absoluta são, em geral, filtros de membrana com altíssima eficiência de remoção (99,9% ou mais).</p>
-        <h3>Classificação de Pré-Filtros</h3>
-        <p>Alguns fornecedores podem reclassificar um filtro com poros maiores como tendo uma classificação mais restritiva, sem chamá-lo de absoluto. Por exemplo, uma membrana de 0,65 micra pode reter algumas partículas de 0,22 micra, e por isso pode ser rotulada como pré-filtro de 0,22 micra. Substituir esse pré-filtro por um filtro absoluto de 0,22 micra provavelmente resultaria em menor vazão, entupimento prematuro e um cliente muito insatisfeito.</p>
-        <h3>Eficiência: alta para baixa e vice-versa</h3>
-        <p>Se um filtro com 80% de eficiência for substituído por um com 99%, provavelmente a vazão será menor e a capacidade de filtração será reduzida. No caso inverso, pode haver melhora na vazão, mas o pré-filtro permitirá passagem de mais contaminantes, causando entupimento prematuro do filtro final.</p>
-        <div class="callout">
-          <strong>Conclusão</strong>
-          <p>A escolha adequada de um pré-filtro não deve se basear apenas em classificações nominais. Compreender as diferenças entre filtros nominais e absolutos, bem como as variações nas classificações de eficiência entre fornecedores, é essencial para evitar falhas no processo.</p>
-        </div>
-        <p>A Verter conta com uma equipe técnica altamente qualificada e experiente, pronta para oferecer suporte na seleção do pré-filtro mais adequado para cada aplicação específica.</p>
-      `
-    },
-    {
-      id:'elemento-equivalente',
-      titulo:'Encontrando um elemento filtrante equivalente ao que eu uso!',
-      data:'28 de maio de 2025',
-      dataIso:'2025-05-28',
-      tempo:'2 min de leitura',
-      cat:'processo',
-      catNome:'Dimensionamento & Processo',
-      resumo:'Ao trocar de fornecedor de filtros, é essencial garantir que o novo possa oferecer equivalentes aos atuais. Um fornecedor de qualidade dedica tempo para entender o que "equivalente" significa na sua aplicação.',
-      tags:['Equivalência','Substituição','Validação','Compatibilidade química','Fornecedor'],
-      conteudo:`
-        <p>Por diversos motivos, você está procurando um novo fornecedor de filtros. Mas é essencial garantir que o novo fornecedor possa oferecer filtros equivalentes aos que estão sendo utilizados atualmente.</p>
-        <h3>Qual é a sua definição de "equivalente"?</h3>
-        <p>Em muitos casos, dependerá da aplicação. Para um sistema de água ou fluxo não crítico, há bastante flexibilidade na escolha. Já para um fluxo crítico ou processo validado, haverá pouca (ou nenhuma) margem para desvios — o que pode exigir o mesmo meio filtrante, materiais, nível de testes e dados de conformidade regulatória.</p>
-        <h3>Como identificar um filtro funcionalmente equivalente?</h3>
-        <p><strong>O que você está filtrando?</strong> A composição química/biológica do fluido ajuda a identificar possíveis problemas de compatibilidade.</p>
-        <p><strong>Tamanho de poro e retenção:</strong> Qual o tamanho das partículas? Classificação absoluta ou nominal? Qual a carga de partículas no fluido? Há entupimento prematuro hoje?</p>
-        <p><strong>Vazão e tamanho de lote:</strong> Qual vazão necessária? Qual o tamanho do lote processado com um conjunto de filtros?</p>
-        <p><strong>Requisitos regulatórios:</strong> Retenção bacteriana, contato com alimentos FDA/UE, toxicidade, TOC e condutividade, endotoxinas, não liberação de fibras.</p>
-        <p><strong>Configuração:</strong> Cartucho ou cápsula? Conexões compatíveis com a carcaça?</p>
-        <p><strong>Sanitização:</strong> Água quente, vapor, autoclave ou químico?</p>
-        <h3>Dois caminhos a seguir</h3>
-        <ol>
-          <li>Buscar na seção de produtos do site da Verter, que fornece fichas técnicas para cada tipo de produto.</li>
-          <li>Agendar uma chamada com a equipe de Engenharia de Aplicações da Verter para discutir requisitos e identificar as melhores alternativas.</li>
-        </ol>
-        <p>Se necessário, realizamos testes com seu próprio fluido para identificar vazão inicial, necessidade de pré-filtro e desempenho do filtrado. Ao final, geramos um relatório com filtros recomendados, performance e requisitos de dimensionamento.</p>
-      `
-    },
-    {
       id:'testador-integridade',
+      imagem:'',
       titulo:'Testador de Integridade de Filtros — Verter',
       data:'Junho de 2025',
       dataIso:'2025-06-01',
@@ -380,6 +661,67 @@ document.addEventListener('click', function(e){
         </div>
       `
     },
+    {
+      id:'pre-filtro-correto',
+      imagem:'/img/blog-pre-filtro-correto.jpg',
+      titulo:'Qual o pré-filtro correto para minha aplicação?',
+      data:'28 de maio de 2025',
+      dataIso:'2025-05-28',
+      tempo:'3 min de leitura',
+      cat:'processo',
+      catNome:'Dimensionamento & Processo',
+      resumo:'Selecionar o tamanho de poro e a eficiência de remoção adequados para um pré-filtro é fundamental para garantir desempenho ideal. Entenda as diferenças entre classificação nominal e absoluta, e como não cometer erros na substituição.',
+      tags:['Pré-filtro','Classificação nominal','Classificação absoluta','Dimensionamento','Vazão'],
+      conteudo:`
+        <p><em>Tempo de leitura: 3 minutos</em></p>
+        <p>Selecionar o tamanho de poro e a eficiência de remoção adequados para um pré-filtro — seja para um novo sistema ou como substituição — é fundamental para garantir um desempenho ideal. Esse processo exige informações detalhadas sobre o fluido a ser filtrado, o tipo de filtro que será protegido, a vazão esperada e a capacidade de filtragem (throughput).</p>
+        <p>Ao substituir um pré-filtro, é importante entender que os fabricantes podem classificar os tamanhos de poro e o desempenho de forma diferente. Solicitar simplesmente um "pré-filtro de 0,45 micra" a outro fornecedor pode não resultar em um produto equivalente.</p>
+        <h3>Pré-Filtração Nominal vs. Absoluta</h3>
+        <p>Filtros para líquidos geralmente são classificados como <strong>absolutos</strong> (removem praticamente todas as partículas acima do tamanho de poro especificado) ou <strong>nominais</strong> (removem algumas ou a maioria das partículas acima dessa classificação).</p>
+        <p>Se o pré-filtro existente possui classificação absoluta, a substituição é relativamente simples. Filtros com classificação absoluta são, em geral, filtros de membrana com altíssima eficiência de remoção (99,9% ou mais).</p>
+        <h3>Classificação de Pré-Filtros</h3>
+        <p>Alguns fornecedores podem reclassificar um filtro com poros maiores como tendo uma classificação mais restritiva, sem chamá-lo de absoluto. Por exemplo, uma membrana de 0,65 micra pode reter algumas partículas de 0,22 micra, e por isso pode ser rotulada como pré-filtro de 0,22 micra. Substituir esse pré-filtro por um filtro absoluto de 0,22 micra provavelmente resultaria em menor vazão, entupimento prematuro e um cliente muito insatisfeito.</p>
+        <h3>Eficiência: alta para baixa e vice-versa</h3>
+        <p>Se um filtro com 80% de eficiência for substituído por um com 99%, provavelmente a vazão será menor e a capacidade de filtração será reduzida. No caso inverso, pode haver melhora na vazão, mas o pré-filtro permitirá passagem de mais contaminantes, causando entupimento prematuro do filtro final.</p>
+        <div class="callout">
+          <strong>Conclusão</strong>
+          <p>A escolha adequada de um pré-filtro não deve se basear apenas em classificações nominais. Compreender as diferenças entre filtros nominais e absolutos, bem como as variações nas classificações de eficiência entre fornecedores, é essencial para evitar falhas no processo.</p>
+        </div>
+        <p>A Verter conta com uma equipe técnica altamente qualificada e experiente, pronta para oferecer suporte na seleção do pré-filtro mais adequado para cada aplicação específica.</p>
+      `
+    },
+    {
+      id:'elemento-equivalente',
+      imagem:'/img/blog-elemento-equivalente.jpg',
+      titulo:'Encontrando um elemento filtrante equivalente ao que eu uso!',
+      data:'28 de maio de 2025',
+      dataIso:'2025-05-28',
+      tempo:'2 min de leitura',
+      cat:'processo',
+      catNome:'Dimensionamento & Processo',
+      resumo:'Ao trocar de fornecedor de filtros, é essencial garantir que o novo possa oferecer equivalentes aos atuais. Um fornecedor de qualidade dedica tempo para entender o que "equivalente" significa na sua aplicação.',
+      tags:['Equivalência','Substituição','Validação','Compatibilidade química','Fornecedor'],
+      conteudo:`
+        <p>Por diversos motivos, você está procurando um novo fornecedor de filtros. Mas é essencial garantir que o novo fornecedor possa oferecer filtros equivalentes aos que estão sendo utilizados atualmente.</p>
+        <h3>Qual é a sua definição de "equivalente"?</h3>
+        <p>Em muitos casos, dependerá da aplicação. Para um sistema de água ou fluxo não crítico, há bastante flexibilidade na escolha. Já para um fluxo crítico ou processo validado, haverá pouca (ou nenhuma) margem para desvios — o que pode exigir o mesmo meio filtrante, materiais, nível de testes e dados de conformidade regulatória.</p>
+        <h3>Como identificar um filtro funcionalmente equivalente?</h3>
+        <p><strong>O que você está filtrando?</strong> A composição química/biológica do fluido ajuda a identificar possíveis problemas de compatibilidade.</p>
+        <p><strong>Tamanho de poro e retenção:</strong> Qual o tamanho das partículas? Classificação absoluta ou nominal? Qual a carga de partículas no fluido? Há entupimento prematuro hoje?</p>
+        <p><strong>Vazão e tamanho de lote:</strong> Qual vazão necessária? Qual o tamanho do lote processado com um conjunto de filtros?</p>
+        <p><strong>Requisitos regulatórios:</strong> Retenção bacteriana, contato com alimentos FDA/UE, toxicidade, TOC e condutividade, endotoxinas, não liberação de fibras.</p>
+        <p><strong>Configuração:</strong> Cartucho ou cápsula? Conexões compatíveis com a carcaça?</p>
+        <p><strong>Sanitização:</strong> Água quente, vapor, autoclave ou químico?</p>
+        <img src="/img/blog-elemento-equivalente-diagrama.png" alt="Guia de substituição: como identificar um elemento filtrante equivalente" class="post-figura">
+        <h3>Dois caminhos a seguir</h3>
+        <ol>
+          <li>Buscar na seção de produtos do site da Verter, que fornece fichas técnicas para cada tipo de produto.</li>
+          <li>Agendar uma chamada com a equipe de Engenharia de Aplicações da Verter para discutir requisitos e identificar as melhores alternativas.</li>
+        </ol>
+        <p>Se necessário, realizamos testes com seu próprio fluido para identificar vazão inicial, necessidade de pré-filtro e desempenho do filtrado. Ao final, geramos um relatório com filtros recomendados, performance e requisitos de dimensionamento.</p>
+      `
+    }
+
   ];
 
   // ============ BLOG RENDER ============
@@ -420,7 +762,9 @@ document.addEventListener('click', function(e){
     feat.innerHTML = featuredPost ? `
       <div class="blog-featured" onclick="openPost('${featuredPost.id}')">
         <div class="thumb">
-          <div class="placeholder">[ Imagem de destaque ]</div>
+          ${featuredPost.imagem
+            ? `<img src="${featuredPost.imagem}" alt="${featuredPost.titulo}" loading="lazy">`
+            : `<div class="placeholder">[ Imagem de destaque ]</div>`}
         </div>
         <div class="content">
           <div class="blog-badge-row">
@@ -445,10 +789,12 @@ document.addEventListener('click', function(e){
     grid.innerHTML = rest.map(p=>`
       <div class="blog-card" onclick="openPost('${p.id}')">
         <div class="thumb">
-          <div class="placeholder">
+          ${p.imagem
+            ? `<img src="${p.imagem}" alt="${p.titulo}" loading="lazy">`
+            : `<div class="placeholder">
             <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></svg></div>
             Imagem do post
-          </div>
+          </div>`}
         </div>
         <div class="content">
           <div class="blog-badge-row">
@@ -489,7 +835,8 @@ document.addEventListener('click', function(e){
     document.getElementById('post-date').textContent = p.data;
     document.getElementById('post-read-time').textContent = p.tempo;
     const content = document.getElementById('post-content');
-    content.innerHTML = p.conteudo +
+    const capa = p.imagem ? `<img src="${p.imagem}" alt="${p.titulo}" class="post-cover">` : '';
+    content.innerHTML = capa + p.conteudo +
       `<div class="post-tags">${p.tags.map(t=>`<span class="post-tag">${t}</span>`).join('')}</div>
        <div class="post-cta">
          <h3>Precisa de suporte técnico especializado?</h3>
@@ -502,10 +849,12 @@ document.addEventListener('click', function(e){
     document.getElementById('related-grid').innerHTML = relatedFallback.map(r=>`
       <div class="blog-card" onclick="openPost('${r.id}')">
         <div class="thumb">
-          <div class="placeholder">
+          ${r.imagem
+            ? `<img src="${r.imagem}" alt="${r.titulo}" loading="lazy">`
+            : `<div class="placeholder">
             <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></svg></div>
             Imagem do post
-          </div>
+          </div>`}
         </div>
         <div class="content">
           <div class="blog-badge-row"><span class="blog-badge">${r.catNome}</span></div>
