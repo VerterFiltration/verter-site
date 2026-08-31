@@ -1101,3 +1101,18 @@
     .hero h1{font-size:1.8rem !important}
     .hero-stats-inner{grid-template-columns:1fr}
   }
+/* ============================================================
+   MOBILE — cabeçalho que libera a tela ao rolar
+   O nav é sticky; ao descer a página ele se recolhe (deixa de
+   cobrir o carrossel e o conteúdo) e reaparece ao subir.
+   ============================================================ */
+@media(max-width:768px){
+  nav.main{transition:transform .26s ease}
+  body.nav-recolhido nav.main{transform:translateY(-100%)}
+  /* cabeçalho um pouco mais baixo: sobra tela para o conteúdo */
+  .nav-inner{padding:9px 16px}
+  .logo-link img{height:32px}
+}
+@media(prefers-reduced-motion:reduce){
+  nav.main{transition:none}
+}
