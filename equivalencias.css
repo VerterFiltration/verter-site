@@ -3,10 +3,11 @@
    Carregar DEPOIS de /styles.css. Classes com prefixo eq-.
    ============================================================ */
 
-/* pontos de grau: ● teal = funcional validado · ● claro = dimensional */
-.eq-dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px;flex-shrink:0;vertical-align:1px}
-.eq-dot-funcional{background:var(--teal)}
-.eq-dot-dimensional{background:var(--water);box-shadow:inset 0 0 0 1px rgba(30,58,95,.28)}
+/* ponto das linhas: marcador estético único (navy). As cores por grau existem
+   apenas nas etiquetas explicativas do bloco de critérios do hub. */
+.eq-dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px;flex-shrink:0;vertical-align:1px;background:var(--navy)}
+.eq-grau-tag .eq-dot-funcional{background:var(--teal)}
+.eq-grau-tag .eq-dot-dimensional{background:var(--water);box-shadow:inset 0 0 0 1px rgba(30,58,95,.28)}
 
 /* ---------- hero compacto (hub e marca) ---------- */
 .eq-hero{padding:52px 32px 46px}
@@ -45,6 +46,10 @@
 .eq-prod-link{color:#1558c0;font-weight:600;font-size:.95rem;line-height:1.35;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;display:inline-block}
 .eq-prod-link:hover{color:#0d3f92;text-decoration-thickness:2px}
 .eq-prod-cat{display:block;font-size:.76rem;color:var(--mute);margin-top:3px}
+.eq-pendente{display:inline-block;font-size:.84rem;font-weight:600;color:var(--mute);font-style:italic;letter-spacing:.02em}
+.eq-pend{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#7a6a3d;background:#f6f0dd;border:1px solid #e6dcc0;border-radius:999px;padding:4px 10px;font-weight:500}
+.eq-nota-pend{margin-top:14px;font-size:.82rem;color:var(--body);line-height:1.6}
+.eq-nota-pend .eq-pend{margin-right:6px}
 .eq-empty{padding:16px 20px;background:var(--mist);border:1px solid var(--water);border-radius:12px;color:var(--body);font-size:.92rem;line-height:1.6;margin-top:14px}
 .eq-empty[hidden]{display:none}
 .eq-empty b{color:var(--navy)}
@@ -85,8 +90,6 @@
 .eq-tabela-sec{padding-top:52px}
 @media(max-width:640px){.eq-tabela-sec{padding-top:36px}}
 .eq-toolbar{align-items:center}
-.eq-filtros{display:flex;gap:8px;flex-wrap:wrap}
-.eq-filtros .blog-cat-btn .eq-dot{margin-right:6px;width:8px;height:8px}
 .eq-table-wrap{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .eq-table{width:100%;border-collapse:collapse;table-layout:fixed}
 .eq-table th{text-align:left;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);background:linear-gradient(90deg,var(--sky) 0%,var(--water) 100%);padding:13px 16px;font-weight:600}
