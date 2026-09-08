@@ -123,77 +123,78 @@
         <div class="produtos-count"><b id="eq-count">14</b> correspondências</div>
         <div class="produtos-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="eq-filtro" type="search" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="Filtrar por código ou família" oninput="eqFiltrar()" aria-label="Filtrar tabela por código ou família"></div>
       </div>
+      <div class="eq-filtros-mob" role="group" aria-label="Filtros por coluna"><div class="eq-th eq-th-mob" data-menu="m0"><button type="button" class="eq-th-btn" data-col="0" aria-expanded="false" aria-haspopup="true"><span>Família</span><svg class="eq-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg><span class="eq-th-tag" hidden></span></button><div class="eq-drop"><div class="eq-drop-top"><button type="button" data-acao="todos" data-col="0">Marcar todos</button><button type="button" data-acao="limpar" data-col="0">Limpar</button></div><div class="eq-drop-lista"><label class="eq-drop-item"><input type="checkbox" data-col="0" value="AQUALINE AL" checked><span>AQUALINE AL</span><i>10</i></label><label class="eq-drop-item"><input type="checkbox" data-col="0" value="AQUALINE ALN" checked><span>AQUALINE ALN</span><i>4</i></label></div></div></div><div class="eq-th eq-th-mob" data-menu="m1"><button type="button" class="eq-th-btn" data-col="1" aria-expanded="false" aria-haspopup="true"><span>Subfamília</span><svg class="eq-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg><span class="eq-th-tag" hidden></span></button><div class="eq-drop"><div class="eq-drop-top"><button type="button" data-acao="todos" data-col="1">Marcar todos</button><button type="button" data-acao="limpar" data-col="1">Limpar</button></div><div class="eq-drop-lista"><label class="eq-drop-item"><input type="checkbox" data-col="1" value="0,6 µm absoluto – legado / mercado" checked><span>0,6 µm absoluto – legado / mercado</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="1 µm absoluto – legado / mercado" checked><span>1 µm absoluto – legado / mercado</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="1 µm nominal – linha atual" checked><span>1 µm nominal – linha atual</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="1,2 µm absoluto – legado / mercado" checked><span>1,2 µm absoluto – legado / mercado</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="10 µm absoluto – legado / mercado" checked><span>10 µm absoluto – legado / mercado</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="10 µm nominal – linha atual" checked><span>10 µm nominal – linha atual</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="100 µm absoluto – legado / mercado" checked><span>100 µm absoluto – legado / mercado</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="2 µm – legado / mercado" checked><span>2 µm – legado / mercado</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="20 µm absoluto – legado / mercado" checked><span>20 µm absoluto – legado / mercado</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="20 µm nominal – linha atual" checked><span>20 µm nominal – linha atual</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="40 µm absoluto – legado / mercado" checked><span>40 µm absoluto – legado / mercado</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="5 µm absoluto – legado / mercado" checked><span>5 µm absoluto – legado / mercado</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="5 µm nominal – linha atual" checked><span>5 µm nominal – linha atual</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="70 µm absoluto – legado / mercado" checked><span>70 µm absoluto – legado / mercado</span><i>1</i></label></div></div></div><div class="eq-th eq-th-mob" data-menu="m2"><button type="button" class="eq-th-btn" data-col="2" aria-expanded="false" aria-haspopup="true"><span>Meio filtrante</span><svg class="eq-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg><span class="eq-th-tag" hidden></span></button><div class="eq-drop"><div class="eq-drop-top"><button type="button" data-acao="todos" data-col="2">Marcar todos</button><button type="button" data-acao="limpar" data-col="2">Limpar</button></div><div class="eq-drop-lista"><label class="eq-drop-item"><input type="checkbox" data-col="2" value="POLIPROPILENO" checked><span>POLIPROPILENO</span><i>14</i></label></div></div></div></div>
       <div class="eq-table-wrap">
         <table class="eq-table">
           <colgroup><col style="width:20%"><col style="width:16.0%"><col style="width:16.0%"><col style="width:16.0%"><col style="width:32%"></colgroup>
-          <thead><tr><th>Código Pentair</th><th>Família</th><th>Subfamília</th><th>Meio filtrante</th><th>Equivalente Verter</th></tr></thead>
+          <thead><tr><th>Código Pentair</th><th class="eq-th-filtro"><div class="eq-th" data-menu="d0"><button type="button" class="eq-th-btn" data-col="0" aria-expanded="false" aria-haspopup="true"><span>Família</span><svg class="eq-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg><span class="eq-th-tag" hidden></span></button><div class="eq-drop"><div class="eq-drop-top"><button type="button" data-acao="todos" data-col="0">Marcar todos</button><button type="button" data-acao="limpar" data-col="0">Limpar</button></div><div class="eq-drop-lista"><label class="eq-drop-item"><input type="checkbox" data-col="0" value="AQUALINE AL" checked><span>AQUALINE AL</span><i>10</i></label><label class="eq-drop-item"><input type="checkbox" data-col="0" value="AQUALINE ALN" checked><span>AQUALINE ALN</span><i>4</i></label></div></div></div></th><th class="eq-th-filtro"><div class="eq-th" data-menu="d1"><button type="button" class="eq-th-btn" data-col="1" aria-expanded="false" aria-haspopup="true"><span>Subfamília</span><svg class="eq-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg><span class="eq-th-tag" hidden></span></button><div class="eq-drop"><div class="eq-drop-top"><button type="button" data-acao="todos" data-col="1">Marcar todos</button><button type="button" data-acao="limpar" data-col="1">Limpar</button></div><div class="eq-drop-lista"><label class="eq-drop-item"><input type="checkbox" data-col="1" value="0,6 µm absoluto – legado / mercado" checked><span>0,6 µm absoluto – legado / mercado</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="1 µm absoluto – legado / mercado" checked><span>1 µm absoluto – legado / mercado</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="1 µm nominal – linha atual" checked><span>1 µm nominal – linha atual</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="1,2 µm absoluto – legado / mercado" checked><span>1,2 µm absoluto – legado / mercado</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="10 µm absoluto – legado / mercado" checked><span>10 µm absoluto – legado / mercado</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="10 µm nominal – linha atual" checked><span>10 µm nominal – linha atual</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="100 µm absoluto – legado / mercado" checked><span>100 µm absoluto – legado / mercado</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="2 µm – legado / mercado" checked><span>2 µm – legado / mercado</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="20 µm absoluto – legado / mercado" checked><span>20 µm absoluto – legado / mercado</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="20 µm nominal – linha atual" checked><span>20 µm nominal – linha atual</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="40 µm absoluto – legado / mercado" checked><span>40 µm absoluto – legado / mercado</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="5 µm absoluto – legado / mercado" checked><span>5 µm absoluto – legado / mercado</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="5 µm nominal – linha atual" checked><span>5 µm nominal – linha atual</span><i>1</i></label><label class="eq-drop-item"><input type="checkbox" data-col="1" value="70 µm absoluto – legado / mercado" checked><span>70 µm absoluto – legado / mercado</span><i>1</i></label></div></div></div></th><th class="eq-th-filtro"><div class="eq-th" data-menu="d2"><button type="button" class="eq-th-btn" data-col="2" aria-expanded="false" aria-haspopup="true"><span>Meio filtrante</span><svg class="eq-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg><span class="eq-th-tag" hidden></span></button><div class="eq-drop"><div class="eq-drop-top"><button type="button" data-acao="todos" data-col="2">Marcar todos</button><button type="button" data-acao="limpar" data-col="2">Limpar</button></div><div class="eq-drop-lista"><label class="eq-drop-item"><input type="checkbox" data-col="2" value="POLIPROPILENO" checked><span>POLIPROPILENO</span><i>14</i></label></div></div></div></th><th>Equivalente Verter</th></tr></thead>
           <tbody id="eq-tbody">
-          <tr data-busca="ALN0160BAQUALINEALN1MNOMINALLINHAATUALPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF">
+          <tr data-busca="ALN0160BAQUALINEALN1MNOMINALLINHAATUALPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF" data-v0="AQUALINE ALN" data-v1="1 µm nominal – linha atual" data-v2="POLIPROPILENO">
             <td class="eq-td-codigo" data-label="Código Pentair"><span class="eq-code"><span class="eq-dot" aria-hidden="true"></span>ALN01-60B</span></td>
             <td data-label="Família">AQUALINE ALN</td><td data-label="Subfamília">1 µm nominal – linha atual</td><td data-label="Meio filtrante">POLIPROPILENO</td>
             <td class="eq-td-prod" data-label="Equivalente Verter"><a class="eq-prod-link" href="/produto/filtro-plissado-high-flow-phf">Filtro Plissado High Flow — PHF</a><span class="eq-prod-cat">Cartuchos High Flow</span></td>
           </tr>
-          <tr data-busca="ALN0560BAQUALINEALN5MNOMINALLINHAATUALPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF">
+          <tr data-busca="ALN0560BAQUALINEALN5MNOMINALLINHAATUALPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF" data-v0="AQUALINE ALN" data-v1="5 µm nominal – linha atual" data-v2="POLIPROPILENO">
             <td class="eq-td-codigo" data-label="Código Pentair"><span class="eq-code"><span class="eq-dot" aria-hidden="true"></span>ALN05-60B</span></td>
             <td data-label="Família">AQUALINE ALN</td><td data-label="Subfamília">5 µm nominal – linha atual</td><td data-label="Meio filtrante">POLIPROPILENO</td>
             <td class="eq-td-prod" data-label="Equivalente Verter"><a class="eq-prod-link" href="/produto/filtro-plissado-high-flow-phf">Filtro Plissado High Flow — PHF</a><span class="eq-prod-cat">Cartuchos High Flow</span></td>
           </tr>
-          <tr data-busca="ALN1060BAQUALINEALN10MNOMINALLINHAATUALPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF">
+          <tr data-busca="ALN1060BAQUALINEALN10MNOMINALLINHAATUALPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF" data-v0="AQUALINE ALN" data-v1="10 µm nominal – linha atual" data-v2="POLIPROPILENO">
             <td class="eq-td-codigo" data-label="Código Pentair"><span class="eq-code"><span class="eq-dot" aria-hidden="true"></span>ALN10-60B</span></td>
             <td data-label="Família">AQUALINE ALN</td><td data-label="Subfamília">10 µm nominal – linha atual</td><td data-label="Meio filtrante">POLIPROPILENO</td>
             <td class="eq-td-prod" data-label="Equivalente Verter"><a class="eq-prod-link" href="/produto/filtro-plissado-high-flow-phf">Filtro Plissado High Flow — PHF</a><span class="eq-prod-cat">Cartuchos High Flow</span></td>
           </tr>
-          <tr data-busca="ALN2060BAQUALINEALN20MNOMINALLINHAATUALPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF">
+          <tr data-busca="ALN2060BAQUALINEALN20MNOMINALLINHAATUALPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF" data-v0="AQUALINE ALN" data-v1="20 µm nominal – linha atual" data-v2="POLIPROPILENO">
             <td class="eq-td-codigo" data-label="Código Pentair"><span class="eq-code"><span class="eq-dot" aria-hidden="true"></span>ALN20-60B</span></td>
             <td data-label="Família">AQUALINE ALN</td><td data-label="Subfamília">20 µm nominal – linha atual</td><td data-label="Meio filtrante">POLIPROPILENO</td>
             <td class="eq-td-prod" data-label="Equivalente Verter"><a class="eq-prod-link" href="/produto/filtro-plissado-high-flow-phf">Filtro Plissado High Flow — PHF</a><span class="eq-prod-cat">Cartuchos High Flow</span></td>
           </tr>
-          <tr data-busca="AL660BAQUALINEAL06MABSOLUTOLEGADOMERCADOPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF">
+          <tr data-busca="AL660BAQUALINEAL06MABSOLUTOLEGADOMERCADOPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF" data-v0="AQUALINE AL" data-v1="0,6 µm absoluto – legado / mercado" data-v2="POLIPROPILENO">
             <td class="eq-td-codigo" data-label="Código Pentair"><span class="eq-code"><span class="eq-dot" aria-hidden="true"></span>AL.6-60B</span></td>
             <td data-label="Família">AQUALINE AL</td><td data-label="Subfamília">0,6 µm absoluto – legado / mercado</td><td data-label="Meio filtrante">POLIPROPILENO</td>
             <td class="eq-td-prod" data-label="Equivalente Verter"><a class="eq-prod-link" href="/produto/filtro-plissado-high-flow-phf">Filtro Plissado High Flow — PHF</a><span class="eq-prod-cat">Cartuchos High Flow</span></td>
           </tr>
-          <tr data-busca="AL0160BAQUALINEAL1MABSOLUTOLEGADOMERCADOPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF">
+          <tr data-busca="AL0160BAQUALINEAL1MABSOLUTOLEGADOMERCADOPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF" data-v0="AQUALINE AL" data-v1="1 µm absoluto – legado / mercado" data-v2="POLIPROPILENO">
             <td class="eq-td-codigo" data-label="Código Pentair"><span class="eq-code"><span class="eq-dot" aria-hidden="true"></span>AL01-60B</span></td>
             <td data-label="Família">AQUALINE AL</td><td data-label="Subfamília">1 µm absoluto – legado / mercado</td><td data-label="Meio filtrante">POLIPROPILENO</td>
             <td class="eq-td-prod" data-label="Equivalente Verter"><a class="eq-prod-link" href="/produto/filtro-plissado-high-flow-phf">Filtro Plissado High Flow — PHF</a><span class="eq-prod-cat">Cartuchos High Flow</span></td>
           </tr>
-          <tr data-busca="AL1260BAQUALINEAL12MABSOLUTOLEGADOMERCADOPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF">
+          <tr data-busca="AL1260BAQUALINEAL12MABSOLUTOLEGADOMERCADOPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF" data-v0="AQUALINE AL" data-v1="1,2 µm absoluto – legado / mercado" data-v2="POLIPROPILENO">
             <td class="eq-td-codigo" data-label="Código Pentair"><span class="eq-code"><span class="eq-dot" aria-hidden="true"></span>AL1.2-60B</span></td>
             <td data-label="Família">AQUALINE AL</td><td data-label="Subfamília">1,2 µm absoluto – legado / mercado</td><td data-label="Meio filtrante">POLIPROPILENO</td>
             <td class="eq-td-prod" data-label="Equivalente Verter"><a class="eq-prod-link" href="/produto/filtro-plissado-high-flow-phf">Filtro Plissado High Flow — PHF</a><span class="eq-prod-cat">Cartuchos High Flow</span></td>
           </tr>
-          <tr data-busca="AL260BAQUALINEAL2MLEGADOMERCADOPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF">
+          <tr data-busca="AL260BAQUALINEAL2MLEGADOMERCADOPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF" data-v0="AQUALINE AL" data-v1="2 µm – legado / mercado" data-v2="POLIPROPILENO">
             <td class="eq-td-codigo" data-label="Código Pentair"><span class="eq-code"><span class="eq-dot" aria-hidden="true"></span>AL2-60B</span></td>
             <td data-label="Família">AQUALINE AL</td><td data-label="Subfamília">2 µm – legado / mercado</td><td data-label="Meio filtrante">POLIPROPILENO</td>
             <td class="eq-td-prod" data-label="Equivalente Verter"><a class="eq-prod-link" href="/produto/filtro-plissado-high-flow-phf">Filtro Plissado High Flow — PHF</a><span class="eq-prod-cat">Cartuchos High Flow</span></td>
           </tr>
-          <tr data-busca="AL560BAQUALINEAL5MABSOLUTOLEGADOMERCADOPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF">
+          <tr data-busca="AL560BAQUALINEAL5MABSOLUTOLEGADOMERCADOPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF" data-v0="AQUALINE AL" data-v1="5 µm absoluto – legado / mercado" data-v2="POLIPROPILENO">
             <td class="eq-td-codigo" data-label="Código Pentair"><span class="eq-code"><span class="eq-dot" aria-hidden="true"></span>AL5-60B</span></td>
             <td data-label="Família">AQUALINE AL</td><td data-label="Subfamília">5 µm absoluto – legado / mercado</td><td data-label="Meio filtrante">POLIPROPILENO</td>
             <td class="eq-td-prod" data-label="Equivalente Verter"><a class="eq-prod-link" href="/produto/filtro-plissado-high-flow-phf">Filtro Plissado High Flow — PHF</a><span class="eq-prod-cat">Cartuchos High Flow</span></td>
           </tr>
-          <tr data-busca="AL1060BAQUALINEAL10MABSOLUTOLEGADOMERCADOPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF">
+          <tr data-busca="AL1060BAQUALINEAL10MABSOLUTOLEGADOMERCADOPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF" data-v0="AQUALINE AL" data-v1="10 µm absoluto – legado / mercado" data-v2="POLIPROPILENO">
             <td class="eq-td-codigo" data-label="Código Pentair"><span class="eq-code"><span class="eq-dot" aria-hidden="true"></span>AL10-60B</span></td>
             <td data-label="Família">AQUALINE AL</td><td data-label="Subfamília">10 µm absoluto – legado / mercado</td><td data-label="Meio filtrante">POLIPROPILENO</td>
             <td class="eq-td-prod" data-label="Equivalente Verter"><a class="eq-prod-link" href="/produto/filtro-plissado-high-flow-phf">Filtro Plissado High Flow — PHF</a><span class="eq-prod-cat">Cartuchos High Flow</span></td>
           </tr>
-          <tr data-busca="AL2060BAQUALINEAL20MABSOLUTOLEGADOMERCADOPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF">
+          <tr data-busca="AL2060BAQUALINEAL20MABSOLUTOLEGADOMERCADOPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF" data-v0="AQUALINE AL" data-v1="20 µm absoluto – legado / mercado" data-v2="POLIPROPILENO">
             <td class="eq-td-codigo" data-label="Código Pentair"><span class="eq-code"><span class="eq-dot" aria-hidden="true"></span>AL20-60B</span></td>
             <td data-label="Família">AQUALINE AL</td><td data-label="Subfamília">20 µm absoluto – legado / mercado</td><td data-label="Meio filtrante">POLIPROPILENO</td>
             <td class="eq-td-prod" data-label="Equivalente Verter"><a class="eq-prod-link" href="/produto/filtro-plissado-high-flow-phf">Filtro Plissado High Flow — PHF</a><span class="eq-prod-cat">Cartuchos High Flow</span></td>
           </tr>
-          <tr data-busca="AL4060BAQUALINEAL40MABSOLUTOLEGADOMERCADOPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF">
+          <tr data-busca="AL4060BAQUALINEAL40MABSOLUTOLEGADOMERCADOPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF" data-v0="AQUALINE AL" data-v1="40 µm absoluto – legado / mercado" data-v2="POLIPROPILENO">
             <td class="eq-td-codigo" data-label="Código Pentair"><span class="eq-code"><span class="eq-dot" aria-hidden="true"></span>AL40-60B</span></td>
             <td data-label="Família">AQUALINE AL</td><td data-label="Subfamília">40 µm absoluto – legado / mercado</td><td data-label="Meio filtrante">POLIPROPILENO</td>
             <td class="eq-td-prod" data-label="Equivalente Verter"><a class="eq-prod-link" href="/produto/filtro-plissado-high-flow-phf">Filtro Plissado High Flow — PHF</a><span class="eq-prod-cat">Cartuchos High Flow</span></td>
           </tr>
-          <tr data-busca="AL7060BAQUALINEAL70MABSOLUTOLEGADOMERCADOPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF">
+          <tr data-busca="AL7060BAQUALINEAL70MABSOLUTOLEGADOMERCADOPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF" data-v0="AQUALINE AL" data-v1="70 µm absoluto – legado / mercado" data-v2="POLIPROPILENO">
             <td class="eq-td-codigo" data-label="Código Pentair"><span class="eq-code"><span class="eq-dot" aria-hidden="true"></span>AL70-60B</span></td>
             <td data-label="Família">AQUALINE AL</td><td data-label="Subfamília">70 µm absoluto – legado / mercado</td><td data-label="Meio filtrante">POLIPROPILENO</td>
             <td class="eq-td-prod" data-label="Equivalente Verter"><a class="eq-prod-link" href="/produto/filtro-plissado-high-flow-phf">Filtro Plissado High Flow — PHF</a><span class="eq-prod-cat">Cartuchos High Flow</span></td>
           </tr>
-          <tr data-busca="AL10060BAQUALINEAL100MABSOLUTOLEGADOMERCADOPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF">
+          <tr data-busca="AL10060BAQUALINEAL100MABSOLUTOLEGADOMERCADOPOLIPROPILENOFILTROPLISSADOHIGHFLOWPHF" data-v0="AQUALINE AL" data-v1="100 µm absoluto – legado / mercado" data-v2="POLIPROPILENO">
             <td class="eq-td-codigo" data-label="Código Pentair"><span class="eq-code"><span class="eq-dot" aria-hidden="true"></span>AL100-60B</span></td>
             <td data-label="Família">AQUALINE AL</td><td data-label="Subfamília">100 µm absoluto – legado / mercado</td><td data-label="Meio filtrante">POLIPROPILENO</td>
             <td class="eq-td-prod" data-label="Equivalente Verter"><a class="eq-prod-link" href="/produto/filtro-plissado-high-flow-phf">Filtro Plissado High Flow — PHF</a><span class="eq-prod-cat">Cartuchos High Flow</span></td>
@@ -240,22 +241,102 @@
   var input = document.getElementById('eq-filtro');
   var WA = 'https://wa.me/5548984691375?text=';
   var MSG = "Olá! Estou na página de equivalências Pentair do site da Verter Filtração e gostaria de verificar o equivalente para o filtro de código: ";
+  var NCOL = 3;
+  var caixas = Array.prototype.slice.call(document.querySelectorAll('.eq-drop-item input'));
+
   function norm(s){ return (s||'').toUpperCase().normalize('NFD').replace(/[^A-Z0-9]/g,''); }
-  window.eqFiltrar = function(){
-    var q = norm(input.value), n = 0;
+
+  // conjunto de valores marcados por coluna (desktop e celular compartilham o mesmo estado)
+  function selecionados(col){
+    var set = {}, algum = false, total = 0;
+    caixas.forEach(function(cb){
+      if(+cb.getAttribute('data-col') !== col) return;
+      if(cb.closest('.eq-th-mob')) return;             // conta só uma das duas cópias
+      total++;
+      if(cb.checked){ set[cb.value] = 1; algum = true; }
+    });
+    return {set: set, algum: algum, total: total, marcados: Object.keys(set).length};
+  }
+
+  function aplicar(){
+    var q = norm(input ? input.value : ''), n = 0;
+    var sel = [];
+    for(var c = 0; c < NCOL; c++) sel.push(selecionados(c));
     rows.forEach(function(tr){
       var ok = !q || tr.getAttribute('data-busca').indexOf(q) >= 0;
+      for(var c = 0; ok && c < NCOL; c++){
+        if(sel[c].marcados === sel[c].total) continue;   // coluna sem filtro
+        ok = !!sel[c].set[tr.getAttribute('data-v' + c)];
+      }
       tr.hidden = !ok; if(ok) n++;
     });
     document.getElementById('eq-count').textContent = n;
+    // etiqueta no cabeçalho quando a coluna está filtrada
+    document.querySelectorAll('.eq-th-btn').forEach(function(b){
+      var c = +b.getAttribute('data-col'), t = b.querySelector('.eq-th-tag');
+      var filtrado = sel[c].marcados !== sel[c].total;
+      b.classList.toggle('filtrado', filtrado);
+      if(t){ t.hidden = !filtrado; t.textContent = sel[c].marcados; }
+    });
     var vazio = document.getElementById('eq-empty');
     vazio.hidden = n > 0;
     if(n === 0){
-      var qt = input.value.trim();
-      document.getElementById('eq-empty-q').textContent = qt || '(filtro selecionado)';
+      var qt = input ? input.value.trim() : '';
+      document.getElementById('eq-empty-q').textContent = qt || '(filtros selecionados)';
       document.getElementById('eq-empty-wa').href = WA + encodeURIComponent(MSG + qt);
     }
-  };
+  }
+  window.eqFiltrar = aplicar;
+
+  // marcar/desmarcar mantendo as duas cópias (cabeçalho e barra do celular) em sincronia
+  function sincronizar(col, valor, marcado){
+    caixas.forEach(function(cb){
+      if(+cb.getAttribute('data-col') === col && cb.value === valor) cb.checked = marcado;
+    });
+  }
+  document.addEventListener('change', function(e){
+    var cb = e.target.closest && e.target.closest('.eq-drop-item input');
+    if(!cb) return;
+    sincronizar(+cb.getAttribute('data-col'), cb.value, cb.checked);
+    aplicar();
+  });
+  document.addEventListener('click', function(e){
+    var acao = e.target.closest && e.target.closest('.eq-drop-top button');
+    if(acao){
+      var col = +acao.getAttribute('data-col'), marcar = acao.getAttribute('data-acao') === 'todos';
+      caixas.forEach(function(cb){ if(+cb.getAttribute('data-col') === col) cb.checked = marcar; });
+      aplicar(); return;
+    }
+    var btn = e.target.closest && e.target.closest('.eq-th-btn');
+    if(btn){
+      var menu = btn.parentNode;
+      fecharOutros(menu);
+      // o hover já pode ter aberto: o clique então fixa o menu em vez de fechá-lo
+      if(menu.classList.contains('aberto') && menu.dataset.fixo !== '1') fixar(menu);
+      else if(menu.dataset.fixo === '1') fechar(menu);
+      else { abrir(menu); fixar(menu); }
+      e.preventDefault(); return;
+    }
+    if(!(e.target.closest && e.target.closest('.eq-drop'))) fecharTodos();
+  });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') fecharTodos(); });
+
+  function abrir(m){ m.classList.add('aberto'); m.querySelector('.eq-th-btn').setAttribute('aria-expanded','true'); }
+  function fechar(m){ m.classList.remove('aberto'); m.dataset.fixo = '0'; m.querySelector('.eq-th-btn').setAttribute('aria-expanded','false'); }
+  function fixar(m){ m.dataset.fixo = '1'; }
+  function fecharOutros(atual){ document.querySelectorAll('.eq-th.aberto').forEach(function(m){ if(m !== atual) fechar(m); }); }
+  function fecharTodos(){ document.querySelectorAll('.eq-th.aberto').forEach(fechar); }
+
+  // no desktop, passar o mouse abre o menu da coluna; sair fecha (a menos que esteja fixado por clique)
+  if(window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    var sair = null;
+    document.querySelectorAll('.eq-th-filtro .eq-th').forEach(function(m){
+      m.addEventListener('mouseenter', function(){ clearTimeout(sair); fecharOutros(m); abrir(m); });
+      m.addEventListener('mouseleave', function(){
+        sair = setTimeout(function(){ if(m.dataset.fixo !== '1') fechar(m); }, 280);
+      });
+    });
+  }
 })();
 </script>
 
