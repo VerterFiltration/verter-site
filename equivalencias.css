@@ -90,7 +90,17 @@
 .eq-tabela-sec{padding-top:52px}
 @media(max-width:640px){.eq-tabela-sec{padding-top:36px}}
 .eq-toolbar{align-items:center}
-.eq-table-wrap{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.eq-table-wrap{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:visible;position:relative;z-index:2}
+.eq-table th:first-child{border-top-left-radius:13px}
+.eq-table th:last-child{border-top-right-radius:13px}
+.eq-table tbody tr:last-child td:first-child{border-bottom-left-radius:13px}
+.eq-table tbody tr:last-child td:last-child{border-bottom-right-radius:13px}
+.eq-table th{overflow:visible}
+.eq-empty{position:relative;z-index:1}
+.eq-empty .eq-limpar{display:inline-block;margin-left:10px;background:var(--navy);color:#fff;border:none;border-radius:999px;padding:6px 14px;font-family:'Barlow',sans-serif;font-size:.8rem;font-weight:600;cursor:pointer}
+.eq-empty .eq-limpar:hover{background:var(--navy-deep)}
+.eq-empty .eq-limpar[hidden],.eq-empty span[hidden]{display:none}
+.eq-empty[hidden]{display:none}
 .eq-table{width:100%;border-collapse:collapse;table-layout:fixed}
 /* ---------- filtro por coluna (cabeçalho e barra do celular) ---------- */
 .eq-th{position:relative;display:inline-block}
