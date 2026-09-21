@@ -247,7 +247,7 @@
           </tbody>
         </table>
       </div>
-      <div class="eq-empty" id="eq-empty" hidden>O código «<b id="eq-empty-q"></b>» não está na tabela. <a id="eq-empty-wa" href="https://wa.me/5548984691375?text=Ol%C3%A1%21%20Estou%20na%20p%C3%A1gina%20de%20equival%C3%AAncias%203M%20%2F%20CUNO%20%2F%20Solventum%20do%20site%20da%20Verter%20Filtra%C3%A7%C3%A3o%20e%20gostaria%20de%20verificar%20o%20equivalente%20para%20o%20filtro%20de%20c%C3%B3digo%3A%20">Enviar para análise da engenharia</a>.</div>
+      <div class="eq-empty" id="eq-empty" hidden><span id="eq-empty-texto">O código «<b id="eq-empty-q"></b>» não está na tabela. <a id="eq-empty-wa" href="https://wa.me/5548984691375?text=Ol%C3%A1%21%20Estou%20na%20p%C3%A1gina%20de%20equival%C3%AAncias%203M%20%2F%20CUNO%20%2F%20Solventum%20do%20site%20da%20Verter%20Filtra%C3%A7%C3%A3o%20e%20gostaria%20de%20verificar%20o%20equivalente%20para%20o%20filtro%20de%20c%C3%B3digo%3A%20">Enviar para análise da engenharia</a>.</span><span id="eq-empty-filtro" hidden>Nenhum código corresponde aos filtros selecionados.</span><button type="button" class="eq-limpar" id="eq-limpar" onclick="eqLimparFiltros()" hidden>Limpar filtros</button></div>
       <p class="eq-legenda"><a href="/equivalencias#criterios">Critérios de equivalência da Verter →</a></p>
     </div>
   </section>
@@ -327,9 +327,18 @@
     vazio.hidden = n > 0;
     if(n === 0){
       var qt = input ? input.value.trim() : '';
-      document.getElementById('eq-empty-q').textContent = qt || '(filtros selecionados)';
+      var porFiltro = sel.some(function(s){ return s.marcados !== s.total; });
+      document.getElementById('eq-empty-texto').hidden = !qt;
+      document.getElementById('eq-empty-filtro').hidden = !!qt;
+      document.getElementById('eq-empty-q').textContent = qt;
       document.getElementById('eq-empty-wa').href = WA + encodeURIComponent(MSG + qt);
+      document.getElementById('eq-limpar').hidden = !porFiltro;
     }
+  }
+  // "Limpar filtros": remarca todas as caixas de todas as colunas (não mexe na busca por texto)
+  window.eqLimparFiltros = function(){
+    caixas.forEach(function(cb){ cb.checked = true; });
+    aplicar();
   }
   window.eqFiltrar = aplicar;
 
