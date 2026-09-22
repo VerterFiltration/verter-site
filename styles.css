@@ -1155,3 +1155,75 @@
   .hero-carousel{height:300px}
   .carousel-slide.product-slide.destaque .product-visual{padding:0 34px 22px}
 }
+
+
+/* ============================================================
+   GUIA DE COMPATIBILIDADE QUÍMICA (post do blog)
+   ============================================================ */
+.cq{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:22px;padding:0 6px;border-radius:6px;font-family:'Barlow',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.02em;line-height:1}
+.cq.r{background:#e3f1ec;color:#1f6b5a}
+.cq.rl{background:#fbf1d9;color:#8a5a0f}
+.cq.nr{background:#f7e1e0;color:#9b2f2c}
+.cq.sd{background:#eef2f5;color:#8a9aab;font-weight:500}
+.post-body-inner .compat-legenda{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0 26px}
+.compat-legenda>div{display:grid;grid-template-columns:auto 1fr;column-gap:10px;align-items:start;padding:12px 14px;background:var(--off);border:1px solid var(--line);border-radius:10px}
+.compat-legenda .cq{grid-row:span 2;margin-top:1px}
+.compat-legenda b{font-family:'Barlow Condensed',sans-serif;font-size:1.02rem;font-weight:700;color:var(--navy);line-height:1.2}
+.compat-legenda small{font-size:.8rem;color:var(--body);line-height:1.45}
+.compat-ferramentas{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:0 0 14px}
+.compat-busca{flex:1;min-width:220px;display:flex;align-items:center;gap:10px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:9px 16px;cursor:text;transition:border-color .2s,box-shadow .2s}
+.compat-busca:focus-within{border-color:var(--teal);box-shadow:0 0 0 3px rgba(61,155,142,.14)}
+.compat-busca svg{width:16px;height:16px;color:var(--mute);flex-shrink:0}
+.compat-busca input{flex:1;min-width:0;border:none;outline:none;background:none;font:inherit;font-size:.92rem;color:var(--ink)}
+.compat-pdf{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;border-radius:999px;padding:10px 18px;font-weight:600;font-size:.86rem;text-decoration:none;transition:background .2s,transform .2s}
+.compat-pdf:hover{background:var(--navy-deep);transform:translateY(-1px)}
+.compat-pdf svg{width:15px;height:15px}
+.compat-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--paper);-webkit-overflow-scrolling:touch}
+.compat-tabela{width:100%;min-width:700px;border-collapse:separate;border-spacing:0;font-size:.84rem}
+.compat-tabela thead th{background:linear-gradient(90deg,var(--sky) 0%,var(--water) 100%);color:var(--navy);text-align:center;font-weight:600;padding:8px 4px}
+.compat-tabela .compat-topo th{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;padding:9px 6px 6px}
+.compat-tabela .compat-th-prod{text-align:left;padding-left:14px!important;vertical-align:bottom;font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase}
+.compat-tabela .compat-mats th span{display:block;font-family:'Barlow Condensed',sans-serif;font-size:.98rem;font-weight:700;letter-spacing:.01em}
+.compat-tabela .compat-mats th small{display:block;font-size:.58rem;font-weight:500;color:var(--body);line-height:1.2;margin-top:1px;opacity:.8}
+.compat-tabela tbody th[scope="row"]{text-align:left;font-weight:500;color:var(--ink);padding:6px 10px 6px 14px;white-space:nowrap}
+.compat-tabela tbody td{text-align:center;padding:4px 3px}
+.compat-tabela tbody tr.compat-linha:nth-child(even) th,.compat-tabela tbody tr.compat-linha:nth-child(even) td{background:#fafcfd}
+.compat-tabela tbody tr.compat-linha:hover th,.compat-tabela tbody tr.compat-linha:hover td{background:var(--mist)}
+.compat-tabela .compat-grupo th{text-align:left;background:var(--off);color:var(--navy);font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;padding:9px 14px 6px;border-top:1px solid var(--line);border-left:3px solid var(--teal)}
+.compat-tabela tbody:first-of-type .compat-grupo th{border-top:none}
+.compat-tabela .compat-sep{border-left:1px dashed var(--water)}
+.compat-tabela tr[hidden]{display:none}
+.compat-tabela th[scope="row"],.compat-tabela .compat-th-prod{position:sticky;left:0;z-index:1;background:var(--paper)}
+.compat-tabela thead .compat-th-prod{background:var(--sky);z-index:2}
+.post-body-inner .compat-nota{margin:16px 0 0;padding:14px 16px;background:var(--mist);border-left:3px solid var(--teal);border-radius:0 10px 10px 0;font-size:.88rem;line-height:1.6}
+.post-body-inner .compat-vazio{margin:14px 0 0;font-size:.92rem}
+.post-body-inner .compat-vazio a{color:#1558c0;font-weight:600}
+@media(max-width:640px){
+  .post-body-inner .compat-legenda{grid-template-columns:1fr}
+  .compat-pdf{width:100%;justify-content:center}
+  .compat-tabela{font-size:.8rem}
+  .compat-tabela tbody th[scope="row"]{white-space:normal;min-width:150px;max-width:170px;box-shadow:2px 0 4px -2px rgba(30,58,95,.12)}
+}
+
+/* ============================================================
+   CARTÃO-CHAMARIZ do guia de compatibilidade (equivalências, produtos)
+   ============================================================ */
+.compat-card{display:flex;gap:14px;align-items:flex-start;padding:18px 20px;background:var(--paper);border:1px solid var(--line);border-radius:12px;text-decoration:none;color:inherit;transition:border-color .2s,box-shadow .2s,transform .2s;position:relative}
+.compat-card:hover{border-color:var(--teal);box-shadow:0 14px 30px -22px rgba(30,58,95,.45);transform:translateY(-2px)}
+.compat-card-mini{display:grid;grid-template-columns:repeat(3,9px);gap:3px;padding:6px;background:var(--off);border:1px solid var(--line);border-radius:8px;flex-shrink:0}
+.compat-card-mini i{display:block;width:9px;height:9px;border-radius:2px}
+.compat-card-mini .r{background:#7fbfae}.compat-card-mini .rl{background:#e2bf6e}.compat-card-mini .nr{background:#d99a97}.compat-card-mini .sd{background:#d3dde6}
+.compat-card-txt{display:flex;flex-direction:column;min-width:0}
+.compat-card-kicker{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:500;margin-bottom:2px}
+.compat-card strong{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;color:var(--navy);line-height:1.15}
+.compat-card-desc{font-size:.8rem;color:var(--body);line-height:1.4;margin-top:2px}
+.compat-card-go{display:inline-flex;align-items:center;gap:5px;margin-top:6px;font-size:.78rem;font-weight:600;color:var(--teal)}
+.compat-card-go svg{width:12px;height:12px;transition:transform .2s}
+.compat-card:hover .compat-card-go svg{transform:translateX(3px)}
+aside.filtros .compat-card{margin-top:18px;padding:14px;gap:12px}
+aside.filtros .compat-card-desc{font-size:.76rem}
+@media(max-width:1024px){ aside.filtros .compat-card{display:none} }
+
+/* cartão do guia na home, abaixo do painel de números */
+.beyond-lado{display:flex;flex-direction:column;gap:16px}
+.compat-card-home{box-shadow:0 20px 50px -30px rgba(30,58,95,.2)}
